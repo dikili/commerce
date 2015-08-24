@@ -1,0 +1,152 @@
+c:\users\adikili855\documents\visual studio 2012\Projects\MusStore\MusStore.Tests\bin\Debug\MusStore.Tests.dll.config
+c:\users\adikili855\documents\visual studio 2012\Projects\MusStore\MusStore.Tests\bin\Debug\MusStore.Tests.dll
+c:\users\adikili855\documents\visual studio 2012\Projects\MusStore\MusStore.Tests\bin\Debug\MusStore.Tests.pdb
+c:\users\adikili855\documents\visual studio 2012\Projects\MusStore\MusStore.Tests\bin\Debug\Microsoft.Web.Infrastructure.dll
+c:\users\adikili855\documents\visual studio 2012\Projects\MusStore\MusStore.Tests\bin\Debug\Microsoft.Web.Mvc.FixedDisplayModes.dll
+c:\users\adikili855\documents\visual studio 2012\Projects\MusStore\MusStore.Tests\bin\Debug\MusStore.dll
+c:\users\adikili855\documents\visual studio 2012\Projects\MusStore\MusStore.Tests\bin\Debug\Newtonsoft.Json.dll
+c:\users\adikili855\documents\visual studio 2012\Projects\MusStore\MusStore.Tests\bin\Debug\System.Web.Helpers.dll
+c:\users\adikili855\documents\visual studio 2012\Projects\MusStore\MusStore.Tests\bin\Debug\System.Web.Mvc.dll
+c:\users\adikili855\documents\visual studio 2012\Projects\MusStore\MusStore.Tests\bin\Debug\System.Web.Razor.dll
+c:\users\adikili855\documents\visual studio 2012\Projects\MusStore\MusStore.Tests\bin\Debug\System.Web.WebPages.Deployment.dll
+c:\users\adikili855\documents\visual studio 2012\Projects\MusStore\MusStore.Tests\bin\Debug\System.Web.WebPages.dll
+c:\users\adikili855\documents\visual studio 2012\Projects\MusStore\MusStore.Tests\bin\Debug\System.Web.WebPages.Razor.dll
+c:\users\adikili855\documents\visual studio 2012\Projects\MusStore\MusStore.Tests\bin\Debug\EntityFramework.dll
+c:\users\adikili855\documents\visual studio 2012\Projects\MusStore\MusStore.Tests\bin\Debug\MusStore.pdb
+c:\users\adikili855\documents\visual studio 2012\Projects\MusStore\MusStore.Tests\bin\Debug\Newtonsoft.Json.xml
+c:\users\adikili855\documents\visual studio 2012\Projects\MusStore\MusStore.Tests\bin\Debug\System.Web.Helpers.xml
+c:\users\adikili855\documents\visual studio 2012\Projects\MusStore\MusStore.Tests\bin\Debug\System.Web.Mvc.xml
+c:\users\adikili855\documents\visual studio 2012\Projects\MusStore\MusStore.Tests\bin\Debug\System.Web.Razor.xml
+c:\users\adikili855\documents\visual studio 2012\Projects\MusStore\MusStore.Tests\bin\Debug\System.Web.WebPages.xml
+c:\users\adikili855\documents\visual studio 2012\Projects\MusStore\MusStore.Tests\bin\Debug\System.Web.WebPages.Deployment.xml
+c:\users\adikili855\documents\visual studio 2012\Projects\MusStore\MusStore.Tests\bin\Debug\System.Web.WebPages.Razor.xml
+c:\users\adikili855\documents\visual studio 2012\Projects\MusStore\MusStore.Tests\bin\Debug\EntityFramework.xml
+c:\users\adikili855\documents\visual studio 2012\Projects\MusStore\MusStore.Tests\obj\Debug\MusStore.Tests.csprojResolveAssemblyReference.cache
+c:\users\adikili855\documents\visual studio 2012\Projects\MusStore\MusStore.Tests\obj\Debug\MusStore.Tests.dll
+c:\users\adikili855\documents\visual studio 2012\Projects\MusStore\MusStore.Tests\obj\Debug\MusStore.Tests.pdb
+C:\Users\Fatih\Desktop\MUS\MusStore\MusStore.Tests\bin\Debug\MusStore.Tests.dll.config
+C:\Users\Fatih\Desktop\MUS\MusStore\MusStore.Tests\bin\Debug\MusStore.Tests.dll
+C:\Users\Fatih\Desktop\MUS\MusStore\MusStore.Tests\bin\Debug\MusStore.Tests.pdb
+C:\Users\Fatih\Desktop\MUS\MusStore\MusStore.Tests\bin\Debug\Microsoft.Web.Infrastructure.dll
+C:\Users\Fatih\Desktop\MUS\MusStore\MusStore.Tests\bin\Debug\Microsoft.Web.Mvc.FixedDisplayModes.dll
+C:\Users\Fatih\Desktop\MUS\MusStore\MusStore.Tests\bin\Debug\MusStore.dll
+C:\Users\Fatih\Desktop\MUS\MusStore\MusStore.Tests\bin\Debug\Newtonsoft.Json.dll
+C:\Users\Fatih\Desktop\MUS\MusStore\MusStore.Tests\bin\Debug\System.Web.Helpers.dll
+C:\Users\Fatih\Desktop\MUS\MusStore\MusStore.Tests\bin\Debug\System.Web.Mvc.dll
+C:\Users\Fatih\Desktop\MUS\MusStore\MusStore.Tests\bin\Debug\System.Web.Razor.dll
+C:\Users\Fatih\Desktop\MUS\MusStore\MusStore.Tests\bin\Debug\System.Web.WebPages.Deployment.dll
+C:\Users\Fatih\Desktop\MUS\MusStore\MusStore.Tests\bin\Debug\System.Web.WebPages.dll
+C:\Users\Fatih\Desktop\MUS\MusStore\MusStore.Tests\bin\Debug\System.Web.WebPages.Razor.dll
+C:\Users\Fatih\Desktop\MUS\MusStore\MusStore.Tests\bin\Debug\EntityFramework.dll
+C:\Users\Fatih\Desktop\MUS\MusStore\MusStore.Tests\bin\Debug\MusStore.pdb
+C:\Users\Fatih\Desktop\MUS\MusStore\MusStore.Tests\bin\Debug\Newtonsoft.Json.xml
+C:\Users\Fatih\Desktop\MUS\MusStore\MusStore.Tests\bin\Debug\System.Web.Helpers.xml
+C:\Users\Fatih\Desktop\MUS\MusStore\MusStore.Tests\bin\Debug\System.Web.Mvc.xml
+C:\Users\Fatih\Desktop\MUS\MusStore\MusStore.Tests\bin\Debug\System.Web.Razor.xml
+C:\Users\Fatih\Desktop\MUS\MusStore\MusStore.Tests\bin\Debug\System.Web.WebPages.xml
+C:\Users\Fatih\Desktop\MUS\MusStore\MusStore.Tests\bin\Debug\System.Web.WebPages.Deployment.xml
+C:\Users\Fatih\Desktop\MUS\MusStore\MusStore.Tests\bin\Debug\System.Web.WebPages.Razor.xml
+C:\Users\Fatih\Desktop\MUS\MusStore\MusStore.Tests\bin\Debug\EntityFramework.xml
+C:\Users\Fatih\Desktop\MUS\MusStore\MusStore.Tests\obj\Debug\MusStore.Tests.csprojResolveAssemblyReference.cache
+C:\Users\Fatih\Desktop\MUS\MusStore\MusStore.Tests\obj\Debug\MusStore.Tests.dll
+C:\Users\Fatih\Desktop\MUS\MusStore\MusStore.Tests\obj\Debug\MusStore.Tests.pdb
+C:\Users\Fatih\Desktop\MUS\MusStore\MusStore.Tests\bin\Debug\Ninject.Web.Common.dll
+C:\Users\Fatih\Desktop\MUS\MusStore\MusStore.Tests\bin\Debug\Ninject.dll
+C:\Users\Fatih\Desktop\MUS\MusStore\MusStore.Tests\bin\Debug\WebActivatorEx.dll
+C:\Users\Fatih\Desktop\MUS\MusStore\MusStore.Tests\bin\Debug\Ninject.Web.Common.xml
+C:\Users\Fatih\Desktop\MUS\MusStore\MusStore.Tests\bin\Debug\Ninject.xml
+C:\Users\adikili855\Desktop\MUS\MusStore\MusStore.Tests\bin\Debug\MusStore.Tests.dll.config
+C:\Users\adikili855\Desktop\MUS\MusStore\MusStore.Tests\bin\Debug\MusStore.Tests.dll
+C:\Users\adikili855\Desktop\MUS\MusStore\MusStore.Tests\bin\Debug\MusStore.Tests.pdb
+C:\Users\adikili855\Desktop\MUS\MusStore\MusStore.Tests\bin\Debug\Microsoft.Web.Infrastructure.dll
+C:\Users\adikili855\Desktop\MUS\MusStore\MusStore.Tests\bin\Debug\Microsoft.Web.Mvc.FixedDisplayModes.dll
+C:\Users\adikili855\Desktop\MUS\MusStore\MusStore.Tests\bin\Debug\MusStore.dll
+C:\Users\adikili855\Desktop\MUS\MusStore\MusStore.Tests\bin\Debug\Newtonsoft.Json.dll
+C:\Users\adikili855\Desktop\MUS\MusStore\MusStore.Tests\bin\Debug\System.Web.Helpers.dll
+C:\Users\adikili855\Desktop\MUS\MusStore\MusStore.Tests\bin\Debug\System.Web.Mvc.dll
+C:\Users\adikili855\Desktop\MUS\MusStore\MusStore.Tests\bin\Debug\System.Web.Razor.dll
+C:\Users\adikili855\Desktop\MUS\MusStore\MusStore.Tests\bin\Debug\System.Web.WebPages.Deployment.dll
+C:\Users\adikili855\Desktop\MUS\MusStore\MusStore.Tests\bin\Debug\System.Web.WebPages.dll
+C:\Users\adikili855\Desktop\MUS\MusStore\MusStore.Tests\bin\Debug\System.Web.WebPages.Razor.dll
+C:\Users\adikili855\Desktop\MUS\MusStore\MusStore.Tests\bin\Debug\EntityFramework.dll
+C:\Users\adikili855\Desktop\MUS\MusStore\MusStore.Tests\bin\Debug\Ninject.Web.Common.dll
+C:\Users\adikili855\Desktop\MUS\MusStore\MusStore.Tests\bin\Debug\Ninject.dll
+C:\Users\adikili855\Desktop\MUS\MusStore\MusStore.Tests\bin\Debug\WebActivatorEx.dll
+C:\Users\adikili855\Desktop\MUS\MusStore\MusStore.Tests\bin\Debug\MusStore.pdb
+C:\Users\adikili855\Desktop\MUS\MusStore\MusStore.Tests\bin\Debug\Newtonsoft.Json.xml
+C:\Users\adikili855\Desktop\MUS\MusStore\MusStore.Tests\bin\Debug\System.Web.Helpers.xml
+C:\Users\adikili855\Desktop\MUS\MusStore\MusStore.Tests\bin\Debug\System.Web.Mvc.xml
+C:\Users\adikili855\Desktop\MUS\MusStore\MusStore.Tests\bin\Debug\System.Web.Razor.xml
+C:\Users\adikili855\Desktop\MUS\MusStore\MusStore.Tests\bin\Debug\System.Web.WebPages.xml
+C:\Users\adikili855\Desktop\MUS\MusStore\MusStore.Tests\bin\Debug\System.Web.WebPages.Deployment.xml
+C:\Users\adikili855\Desktop\MUS\MusStore\MusStore.Tests\bin\Debug\System.Web.WebPages.Razor.xml
+C:\Users\adikili855\Desktop\MUS\MusStore\MusStore.Tests\bin\Debug\EntityFramework.xml
+C:\Users\adikili855\Desktop\MUS\MusStore\MusStore.Tests\bin\Debug\Ninject.Web.Common.xml
+C:\Users\adikili855\Desktop\MUS\MusStore\MusStore.Tests\bin\Debug\Ninject.xml
+C:\Users\adikili855\Desktop\MUS\MusStore\MusStore.Tests\obj\Debug\MusStore.Tests.csprojResolveAssemblyReference.cache
+C:\Users\adikili855\Desktop\MUS\MusStore\MusStore.Tests\obj\Debug\MusStore.Tests.dll
+C:\Users\adikili855\Desktop\MUS\MusStore\MusStore.Tests\obj\Debug\MusStore.Tests.pdb
+C:\Users\Fatih\Desktop\MusStore\MusStore.Tests\bin\Debug\MusStore.Tests.dll.config
+C:\Users\Fatih\Desktop\MusStore\MusStore.Tests\bin\Debug\MusStore.Tests.dll
+C:\Users\Fatih\Desktop\MusStore\MusStore.Tests\bin\Debug\MusStore.Tests.pdb
+C:\Users\Fatih\Desktop\MusStore\MusStore.Tests\bin\Debug\Microsoft.Web.Infrastructure.dll
+C:\Users\Fatih\Desktop\MusStore\MusStore.Tests\bin\Debug\Microsoft.Web.Mvc.FixedDisplayModes.dll
+C:\Users\Fatih\Desktop\MusStore\MusStore.Tests\bin\Debug\MusStore.dll
+C:\Users\Fatih\Desktop\MusStore\MusStore.Tests\bin\Debug\Newtonsoft.Json.dll
+C:\Users\Fatih\Desktop\MusStore\MusStore.Tests\bin\Debug\System.Web.Helpers.dll
+C:\Users\Fatih\Desktop\MusStore\MusStore.Tests\bin\Debug\System.Web.Mvc.dll
+C:\Users\Fatih\Desktop\MusStore\MusStore.Tests\bin\Debug\System.Web.Razor.dll
+C:\Users\Fatih\Desktop\MusStore\MusStore.Tests\bin\Debug\System.Web.WebPages.Deployment.dll
+C:\Users\Fatih\Desktop\MusStore\MusStore.Tests\bin\Debug\System.Web.WebPages.dll
+C:\Users\Fatih\Desktop\MusStore\MusStore.Tests\bin\Debug\System.Web.WebPages.Razor.dll
+C:\Users\Fatih\Desktop\MusStore\MusStore.Tests\bin\Debug\EntityFramework.dll
+C:\Users\Fatih\Desktop\MusStore\MusStore.Tests\bin\Debug\Ninject.Web.Common.dll
+C:\Users\Fatih\Desktop\MusStore\MusStore.Tests\bin\Debug\Ninject.dll
+C:\Users\Fatih\Desktop\MusStore\MusStore.Tests\bin\Debug\WebActivatorEx.dll
+C:\Users\Fatih\Desktop\MusStore\MusStore.Tests\bin\Debug\MusStore.pdb
+C:\Users\Fatih\Desktop\MusStore\MusStore.Tests\bin\Debug\Newtonsoft.Json.xml
+C:\Users\Fatih\Desktop\MusStore\MusStore.Tests\bin\Debug\System.Web.Helpers.xml
+C:\Users\Fatih\Desktop\MusStore\MusStore.Tests\bin\Debug\System.Web.Mvc.xml
+C:\Users\Fatih\Desktop\MusStore\MusStore.Tests\bin\Debug\System.Web.Razor.xml
+C:\Users\Fatih\Desktop\MusStore\MusStore.Tests\bin\Debug\System.Web.WebPages.xml
+C:\Users\Fatih\Desktop\MusStore\MusStore.Tests\bin\Debug\System.Web.WebPages.Deployment.xml
+C:\Users\Fatih\Desktop\MusStore\MusStore.Tests\bin\Debug\System.Web.WebPages.Razor.xml
+C:\Users\Fatih\Desktop\MusStore\MusStore.Tests\bin\Debug\EntityFramework.xml
+C:\Users\Fatih\Desktop\MusStore\MusStore.Tests\bin\Debug\Ninject.Web.Common.xml
+C:\Users\Fatih\Desktop\MusStore\MusStore.Tests\bin\Debug\Ninject.xml
+C:\Users\Fatih\Desktop\MusStore\MusStore.Tests\obj\Debug\MusStore.Tests.csprojResolveAssemblyReference.cache
+C:\Users\Fatih\Desktop\MusStore\MusStore.Tests\obj\Debug\MusStore.Tests.dll
+C:\Users\Fatih\Desktop\MusStore\MusStore.Tests\obj\Debug\MusStore.Tests.pdb
+C:\Users\Fatih\Desktop\MusStore\MusStore.Tests\bin\Debug\WebApiContrib.IoC.Ninject.dll
+C:\Users\adikili855\Desktop\MusStore\MusStore.Tests\bin\Debug\MusStore.Tests.dll.config
+C:\Users\adikili855\Desktop\MusStore\MusStore.Tests\bin\Debug\MusStore.Tests.dll
+C:\Users\adikili855\Desktop\MusStore\MusStore.Tests\bin\Debug\MusStore.Tests.pdb
+C:\Users\adikili855\Desktop\MusStore\MusStore.Tests\bin\Debug\Microsoft.Web.Infrastructure.dll
+C:\Users\adikili855\Desktop\MusStore\MusStore.Tests\bin\Debug\Microsoft.Web.Mvc.FixedDisplayModes.dll
+C:\Users\adikili855\Desktop\MusStore\MusStore.Tests\bin\Debug\MusStore.dll
+C:\Users\adikili855\Desktop\MusStore\MusStore.Tests\bin\Debug\Newtonsoft.Json.dll
+C:\Users\adikili855\Desktop\MusStore\MusStore.Tests\bin\Debug\System.Web.Helpers.dll
+C:\Users\adikili855\Desktop\MusStore\MusStore.Tests\bin\Debug\System.Web.Mvc.dll
+C:\Users\adikili855\Desktop\MusStore\MusStore.Tests\bin\Debug\System.Web.Razor.dll
+C:\Users\adikili855\Desktop\MusStore\MusStore.Tests\bin\Debug\System.Web.WebPages.Deployment.dll
+C:\Users\adikili855\Desktop\MusStore\MusStore.Tests\bin\Debug\System.Web.WebPages.dll
+C:\Users\adikili855\Desktop\MusStore\MusStore.Tests\bin\Debug\System.Web.WebPages.Razor.dll
+C:\Users\adikili855\Desktop\MusStore\MusStore.Tests\bin\Debug\EntityFramework.dll
+C:\Users\adikili855\Desktop\MusStore\MusStore.Tests\bin\Debug\Ninject.Web.Common.dll
+C:\Users\adikili855\Desktop\MusStore\MusStore.Tests\bin\Debug\Ninject.dll
+C:\Users\adikili855\Desktop\MusStore\MusStore.Tests\bin\Debug\WebActivatorEx.dll
+C:\Users\adikili855\Desktop\MusStore\MusStore.Tests\bin\Debug\WebApiContrib.IoC.Ninject.dll
+C:\Users\adikili855\Desktop\MusStore\MusStore.Tests\bin\Debug\MusStore.pdb
+C:\Users\adikili855\Desktop\MusStore\MusStore.Tests\bin\Debug\Newtonsoft.Json.xml
+C:\Users\adikili855\Desktop\MusStore\MusStore.Tests\bin\Debug\System.Web.Helpers.xml
+C:\Users\adikili855\Desktop\MusStore\MusStore.Tests\bin\Debug\System.Web.Mvc.xml
+C:\Users\adikili855\Desktop\MusStore\MusStore.Tests\bin\Debug\System.Web.Razor.xml
+C:\Users\adikili855\Desktop\MusStore\MusStore.Tests\bin\Debug\System.Web.WebPages.xml
+C:\Users\adikili855\Desktop\MusStore\MusStore.Tests\bin\Debug\System.Web.WebPages.Deployment.xml
+C:\Users\adikili855\Desktop\MusStore\MusStore.Tests\bin\Debug\System.Web.WebPages.Razor.xml
+C:\Users\adikili855\Desktop\MusStore\MusStore.Tests\bin\Debug\EntityFramework.xml
+C:\Users\adikili855\Desktop\MusStore\MusStore.Tests\bin\Debug\Ninject.Web.Common.xml
+C:\Users\adikili855\Desktop\MusStore\MusStore.Tests\bin\Debug\Ninject.xml
+C:\Users\adikili855\Desktop\MusStore\MusStore.Tests\obj\Debug\MusStore.Tests.csprojResolveAssemblyReference.cache
+C:\Users\adikili855\Desktop\MusStore\MusStore.Tests\obj\Debug\MusStore.Tests.dll
+C:\Users\adikili855\Desktop\MusStore\MusStore.Tests\obj\Debug\MusStore.Tests.pdb
