@@ -14,7 +14,7 @@ namespace MusStore.Data
         public string Body { get; set; }
         public DateTime Created { get; set; }
         //public bool Flagged { get; set; }
-
+        public string Path { get; set; }
        public ICollection<Reply> Replies { get; set; }
     }
 }
