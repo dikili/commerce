@@ -184,7 +184,6 @@ C:\Users\Fatih\Desktop\commerce\MusStore\bin\System.Web.WebPages.Razor.xml
 C:\Users\Fatih\Desktop\commerce\MusStore\obj\Debug\MusStore.csprojResolveAssemblyReference.cache
 C:\Users\Fatih\Desktop\commerce\MusStore\obj\Debug\MusStore.dll
 C:\Users\Fatih\Desktop\commerce\MusStore\obj\Debug\MusStore.pdb
-C:\Source\commerce\MusStore\obj\Debug\MusStore.csprojResolveAssemblyReference.cache
 C:\Source\commerce\MusStore\bin\MusStore.dll
 C:\Source\commerce\MusStore\bin\MusStore.pdb
 C:\Source\commerce\MusStore\bin\Microsoft.Web.Infrastructure.dll
