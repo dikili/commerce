@@ -4,7 +4,7 @@
     ViewBag.Title = "CompanyEntry";
 }
 
-<h2>CompanyEntry</h2>
+<h2></h2>
 
 
 <form method="post" action="/Home/CompanyEntry" enctype="multipart/form-data">
@@ -19,17 +19,13 @@
         <div class="editor-label">
             @Html.LabelFor(model => model.Body)
         </div>
+        
         <div class="editor-field">
-            @Html.EditorFor(model => model.Body)
+            @Html.TextBoxFor(model => model.Body, new { width="250px", height="300px", maxlenght=2000,multiline=true})
             @Html.ValidationMessageFor(model => model.Body)
         </div>
         <label for="file">Upload Image:</label>
         <input type="file" name="file" id="file" /><br><br>
-
-        <div class="editor-field">
-            @Html.EditorFor(model => model.Path)
-            @Html.ValidationMessageFor(model => model.Path)
-        </div>
 
         <p>
             <input type="submit" value="Submit" />

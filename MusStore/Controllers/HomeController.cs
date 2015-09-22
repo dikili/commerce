@@ -47,7 +47,6 @@ namespace MusStore.Controllers
         [HttpGet]
         public ActionResult CompanyEntry()
         {
-
             return View();
         }
 
