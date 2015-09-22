@@ -1,4 +1,4 @@
-﻿@model IEnumerable<MusStore.Data.Topic>
+﻿@model MusStore.Data.Topic
 
 @{
     ViewBag.Title = "Index";
@@ -320,16 +320,18 @@
     </div>
 </div>*@
 <div class="messages">
-    @foreach (var topic in Model)
+    
+   @* @foreach (var topic in Model)
     {
-        <div class="message row">
+        *@<div class="message row">
             <div class="title span10">
-                @topic.Title
+               @Model.Title
             </div>
-            <div class="contents span16"> <img src=@topic.Path /></div>
+            <div class="contents span16"> <img src= @Model.Path>
+            </div>
             @*<div class="date span2">Feb 12,2015</div>*@
             <div class="contents span12">
-                @topic.Body
+                 @Model.Body
             </div>
             <div class="toolbar span12">
                 <button class="btn-primary reply-button span2">
@@ -338,7 +340,7 @@
                 <div class="replies span12"></div>
             </div>
         </div>
-    }
+   @*}*@
 </div>      
 
 

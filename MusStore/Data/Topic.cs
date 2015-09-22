@@ -16,5 +16,7 @@ namespace MusStore.Data
         //public bool Flagged { get; set; }
         public string Path { get; set; }
        public ICollection<Reply> Replies { get; set; }
+        public int CompanyId { get; set; }
+
     }
 }

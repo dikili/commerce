@@ -192,7 +192,6 @@ C:\Source\commerce\MusStore\bin\System.Web.Razor.dll
 C:\Source\commerce\MusStore\bin\System.Web.WebPages.Deployment.dll
 C:\Source\commerce\MusStore\bin\System.Web.WebPages.dll
 C:\Source\commerce\MusStore\bin\System.Web.WebPages.Razor.dll
-C:\Source\commerce\MusStore\bin\Microsoft.Web.Infrastructure.xml
 C:\Source\commerce\MusStore\bin\System.Web.Helpers.xml
 C:\Source\commerce\MusStore\bin\System.Web.Razor.xml
 C:\Source\commerce\MusStore\bin\System.Web.WebPages.xml
@@ -201,3 +200,19 @@ C:\Source\commerce\MusStore\bin\System.Web.WebPages.Razor.xml
 C:\Source\commerce\MusStore\obj\Debug\MusStore.dll
 C:\Source\commerce\MusStore\obj\Debug\MusStore.pdb
 C:\Source\commerce\MusStore\obj\Debug\MusStore.csprojResolveAssemblyReference.cache
+C:\Source\commerce\MusStore\bin\System.Web.Mvc.xml
+C:\Source\commerce\MusStore\bin\EntityFramework.dll
+C:\Source\commerce\MusStore\bin\EntityFramework.SqlServer.dll
+C:\Source\commerce\MusStore\bin\Microsoft.Web.Mvc.FixedDisplayModes.dll
+C:\Source\commerce\MusStore\bin\Newtonsoft.Json.dll
+C:\Source\commerce\MusStore\bin\Ninject.dll
+C:\Source\commerce\MusStore\bin\Ninject.Web.Common.dll
+C:\Source\commerce\MusStore\bin\Ninject.Web.Mvc.dll
+C:\Source\commerce\MusStore\bin\WebActivatorEx.dll
+C:\Source\commerce\MusStore\bin\WebApiContrib.IoC.Ninject.dll
+C:\Source\commerce\MusStore\bin\EntityFramework.xml
+C:\Source\commerce\MusStore\bin\EntityFramework.SqlServer.xml
+C:\Source\commerce\MusStore\bin\Newtonsoft.Json.xml
+C:\Source\commerce\MusStore\bin\Ninject.xml
+C:\Source\commerce\MusStore\bin\Ninject.Web.Common.xml
+C:\Source\commerce\MusStore\bin\Ninject.Web.Mvc.xml

@@ -9,7 +9,7 @@ namespace MusStore.Data
     public interface IMessageBoardRepository
     {
         IQueryable<Topic> GetTopics();
-
+        Topic GetTopic(int? Id);
         IQueryable<Topic> GetTopicsIncludingReplies();
         IQueryable<Reply> GetRepliesByTopic(int topicId);
 

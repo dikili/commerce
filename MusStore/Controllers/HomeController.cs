@@ -21,14 +21,26 @@ namespace MusStore.Controllers
             _mail = mail;
             _repo = repo;
         }
-        public ActionResult Index()
+        [HttpGet]
+        public ActionResult Index(int? Id)
         {
 
-            var topics = _repo.GetTopics()
-                .OrderByDescending(t => t.Created)
-                .Take(25).ToList();
+            //var topic = _repo.GetTopics()
+            //    .OrderByDescending(t => t.Created)
+            //    .Take(25).ToList();
+           var topic=new MusStore.Data.Topic();
+           
+            if (Id == 0 || Id==null)
+            {
+                 topic = _repo.GetTopics().FirstOrDefault();
+            }
+            else
+            {
+                 topic = _repo.GetTopic(Id);  
+            }
+ 
 
-            return View(topics);
+            return View(topic);
         }
         
         public ActionResult Contact()

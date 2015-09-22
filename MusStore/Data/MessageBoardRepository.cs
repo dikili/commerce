@@ -57,7 +57,11 @@ namespace MusStore.Data
             return _ctx.Topics;
         }
 
-
+        public Topic GetTopic(int? Id)
+        {
+            // var ctx=new MessageBoardContext(); this is expensive and this needs to be disposed properly as well.
+            return _ctx.Topics.Where(p=>p.Id==Id).FirstOrDefault();
+        }
         public bool AddReply(Reply newReply)
         {
             try
