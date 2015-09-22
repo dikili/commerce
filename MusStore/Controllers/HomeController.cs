@@ -7,6 +7,7 @@ using System.Web.UI.WebControls;
 using MusStore.Data;
 using MusStore.Models;
 using MusStore.Services;
+using System.IO;
 
 namespace MusStore.Controllers
 {
@@ -42,7 +43,36 @@ namespace MusStore.Controllers
 
             return View(topic);
         }
-        
+
+        [HttpGet]
+        public ActionResult CompanyEntry()
+        {
+
+            return View();
+        }
+
+        [HttpPost]
+        public ActionResult CompanyEntry(HttpPostedFileBase file,Topic company)
+        {
+            if (file != null && file.ContentLength > 0)
+                try
+                {
+                    string path = Path.Combine(Server.MapPath("~/Images"),
+                                               Path.GetFileName(file.FileName));
+                    file.SaveAs(path);
+                    ViewBag.Message = "File uploaded successfully";
+                }
+                catch (Exception ex)
+                {
+                    ViewBag.Message = "ERROR:" + ex.Message.ToString();
+                }
+            else
+            {
+                ViewBag.Message = "You have not specified a file.";
+            }
+            return View();
+        }
+
         public ActionResult Contact()
         {
             return View();

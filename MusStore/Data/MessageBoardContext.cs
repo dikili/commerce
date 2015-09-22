@@ -21,5 +21,7 @@ namespace MusStore.Data
 
         public DbSet<Topic> Topics { get; set; }
         public DbSet<Reply> Replies { get; set; }
+
+        public DbSet<Company> Companies { get; set; }
     }
 }

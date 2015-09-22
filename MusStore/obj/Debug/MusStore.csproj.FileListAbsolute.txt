@@ -162,7 +162,6 @@ C:\Users\Fatih\Desktop\commerce\MusStore\bin\Ninject.dll
 C:\Users\Fatih\Desktop\commerce\MusStore\bin\Ninject.Web.Common.dll
 C:\Users\Fatih\Desktop\commerce\MusStore\bin\Ninject.Web.Mvc.dll
 C:\Users\Fatih\Desktop\commerce\MusStore\bin\System.Web.Helpers.dll
-C:\Users\Fatih\Desktop\commerce\MusStore\bin\System.Web.Mvc.dll
 C:\Users\Fatih\Desktop\commerce\MusStore\bin\System.Web.Razor.dll
 C:\Users\Fatih\Desktop\commerce\MusStore\bin\System.Web.WebPages.Deployment.dll
 C:\Users\Fatih\Desktop\commerce\MusStore\bin\System.Web.WebPages.dll
