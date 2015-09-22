@@ -20,6 +20,9 @@ font-size:20px;
 margin:5px 0px;
 padding:5px 0px;
 }
+.messages {
+    margin-left: 25px;
+}
 .message {
     background: #fff none repeat scroll 0 0 #c8c8c8;
     border: 1px solid #888;
