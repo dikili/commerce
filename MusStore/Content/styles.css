@@ -36,11 +36,11 @@
   display: block;
   color: #ffffff;
   text-shadow: 0 1px 1px #000;
-  background: #64676e;
-  background: -moz-linear-gradient(#64676e 0%, #4c4e53 100%);
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #64676e), color-stop(100%, #4c4e53));
-  background: -webkit-linear-gradient(#64676e 0%, #4c4e53 100%);
-  background: linear-gradient(#64676e 0%, #4c4e53 100%);
+  background: #0072c6;
+  background: -moz-linear-gradient(#0072c6 0%, #0072c6 100%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #0072c6), color-stop(100%, #0072c6));
+  background: -webkit-linear-gradient(#0072c6 0%, #0072c6 100%);
+  background: linear-gradient(#0072c6 0%, #0072c6 100%);
 }
 #cssmenu > ul > li > a:hover {
   text-decoration: none;
@@ -49,13 +49,13 @@
   border-bottom: none;
 }
 #cssmenu > ul > li.active > a {
-  background: #97c700;
-  background: -moz-linear-gradient(#97c700 0%, #709400 100%);
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #97c700), color-stop(100%, #709400));
-  background: -webkit-linear-gradient(#97c700 0%, #709400 100%);
-  background: linear-gradient(#97c700 0%, #709400 100%);
-  color: #4e5800;
-  text-shadow: 0 1px 1px #709400;
+  background: #0072c6;
+  background: -moz-linear-gradient(#0072c6 0%, #0072c6 100%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #0072c6), color-stop(100%, #0072c6));
+  background: -webkit-linear-gradient(#0072c6 0%, #0072c6 100%);
+  background: linear-gradient(#0072c6 0%, #0072c6 100%);
+  color: red;
+  text-shadow: 0 1px 1px #0072c6;
 }
 #cssmenu > ul > li.has-sub > a:after {
   content: "";

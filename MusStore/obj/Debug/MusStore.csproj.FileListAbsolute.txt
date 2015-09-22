@@ -194,10 +194,10 @@ C:\Source\commerce\MusStore\bin\System.Web.WebPages.dll
 C:\Source\commerce\MusStore\bin\System.Web.WebPages.Razor.dll
 C:\Source\commerce\MusStore\bin\Microsoft.Web.Infrastructure.xml
 C:\Source\commerce\MusStore\bin\System.Web.Helpers.xml
-C:\Source\commerce\MusStore\bin\System.Web.Mvc.xml
 C:\Source\commerce\MusStore\bin\System.Web.Razor.xml
 C:\Source\commerce\MusStore\bin\System.Web.WebPages.xml
 C:\Source\commerce\MusStore\bin\System.Web.WebPages.Deployment.xml
 C:\Source\commerce\MusStore\bin\System.Web.WebPages.Razor.xml
 C:\Source\commerce\MusStore\obj\Debug\MusStore.dll
 C:\Source\commerce\MusStore\obj\Debug\MusStore.pdb
+C:\Source\commerce\MusStore\obj\Debug\MusStore.csprojResolveAssemblyReference.cache
