@@ -51,12 +51,15 @@ namespace MusStore.Controllers
         }
 
         [HttpPost]
-        public ActionResult CompanyEntry(HttpPostedFileBase file,Topic company)
+        public ActionResult CompanyEntry(HttpPostedFileBase file,CompanyTopic company)
         {
+            // This needs to save the file, get the path form the topic and save both the topic and the company
+
             if (file != null && file.ContentLength > 0)
                 try
                 {
-                    string path = Path.Combine(Server.MapPath("~/Images"),
+                   
+                    string path = Path.Combine(Server.MapPath("~/Content/Images"),
                                                Path.GetFileName(file.FileName));
                     file.SaveAs(path);
                     ViewBag.Message = "File uploaded successfully";

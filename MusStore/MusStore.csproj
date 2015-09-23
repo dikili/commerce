@@ -149,6 +149,7 @@
     <Compile Include="Data\MessageBoardRepository.cs" />
     <Compile Include="Data\Reply.cs" />
     <Compile Include="Data\Topic.cs" />
+    <Compile Include="Models\CompanyTopic.cs" />
     <Compile Include="Models\ContactModel.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Global.asax.cs">

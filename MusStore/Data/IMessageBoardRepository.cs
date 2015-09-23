@@ -17,6 +17,8 @@ namespace MusStore.Data
 
         bool AddTopic(Topic newTopic);
 
+        bool AddCompany(Company newCompany);
+
         bool AddReply(Reply newReply);
     }
 }

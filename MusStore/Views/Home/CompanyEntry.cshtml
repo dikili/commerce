@@ -1,4 +1,5 @@
-﻿@model MusStore.Data.Topic
+﻿@using System.Web.ModelBinding
+@model MusStore.Models.CompanyTopic
 
 @{
     ViewBag.Title = "CompanyEntry";
@@ -12,32 +13,41 @@
     <fieldset>
         <legend class="editor-label">Please Enter Your Company's Product Details Briefly</legend>
           <div class="editor-label">
-              Title
+           Company Name
         </div>
-        <div class="editor-field">
-            @* @Html.EditorFor(model => model.Title)
+         <div class="editor-field">
+@*             @Html.EditorFor(model => model.Title)
             @Html.ValidationMessageFor(model => model.Title)*@
-            <input type="text"></input>
+           
+            <input class="validate[required]" type="text" data-errormessage-value-missing="You need to enter the full name of your company" name="CompanyName"/>
+        </div>
+        
+        <div class="editor-label">
+            Title
+        </div>
+
+        <div class="editor-field">
+@*             @Html.EditorFor(model => model.Title)
+            @Html.ValidationMessageFor(model => model.Title)*@
+           
+            <input class="validate[required]" type="text" data-errormessage-value-missing="You need to specify a title" name="Title"/>
         </div>
 
         <div class="editor-label">
-            Description of the company,products...
+           Brief description of the company,products...
         </div>
        
         <div class="editor-field-body">
-            @*  @Html.EditorFor(model => model.Body,new { @class="text-body-field" })
+         @*     @Html.EditorFor(model => model.Body,new { @class="text-body-field" })
             @Html.ValidationMessageFor(model => model.Body)*@
-            <textarea class="text-body-field"></textarea>
+            <textarea class="text-body-field" name="Body"></textarea>
         </div>
         <div class="editor-label">
             Upload Image
         </div>
-        <input type="file" name="file" id="file" /><br><br>
+        <input class="validate[optional,custom[validateMIME[image/jpeg|image/png]]]]" type="file" name="file" id="file" /><br><br>
         <p>
-
-             <input value="someone@nowhere.com" class="validate[required,custom[email]]" type="text" name="email" id="email" />
-
-            <input type="submit" value="Submit"/>
+            <input type="submit" value="Submit" />
         </p>
     </fieldset>
 

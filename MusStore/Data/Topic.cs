@@ -18,8 +18,10 @@ namespace MusStore.Data
         public DateTime Created { get; set; }
         //public bool Flagged { get; set; }
         public string Path { get; set; }
-       public ICollection<Reply> Replies { get; set; }
+    
         public int CompanyId { get; set; }
+
+        public bool isVisible { get; set; }
 
     }
 }

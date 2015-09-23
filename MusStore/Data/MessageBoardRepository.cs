@@ -50,7 +50,18 @@ namespace MusStore.Data
                 return false;
             }
         }
-
+        public bool AddCompany(Company newCompany)
+        {
+            try
+            {
+                _ctx.Companies.Add(newCompany);
+                return true;
+            }
+            catch (Exception ex)
+            {
+                return false;
+            }
+        }
         public IQueryable<Topic> GetTopics()
         {
             // var ctx=new MessageBoardContext(); this is expensive and this needs to be disposed properly as well.
@@ -62,6 +73,17 @@ namespace MusStore.Data
             // var ctx=new MessageBoardContext(); this is expensive and this needs to be disposed properly as well.
             return _ctx.Topics.Where(p=>p.Id==Id).FirstOrDefault();
         }
+
+        public IQueryable<Company> GetCompanies()
+        {
+            return _ctx.Companies;
+        }
+
+        public Company GetCompany(int? Id)
+        {
+            return _ctx.Companies.FirstOrDefault(p => p.Id == Id);
+        }
+
         public bool AddReply(Reply newReply)
         {
             try
