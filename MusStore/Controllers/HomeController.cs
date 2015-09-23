@@ -91,7 +91,7 @@ namespace MusStore.Controllers
 
            
             var comp = new Company {CompanyName = company.CompanyName};
-            _repo.AddCompany(comp);
+           // _repo.AddCompany(comp);
             
             var listing = new Topic
             {
