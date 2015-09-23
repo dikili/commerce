@@ -41,6 +41,7 @@
   background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #0072c6), color-stop(100%, #0072c6));
   background: -webkit-linear-gradient(#0072c6 0%, #0072c6 100%);
   background: linear-gradient(#0072c6 0%, #0072c6 100%);
+  position: relative;
 }
 #cssmenu > ul > li > a:hover {
   text-decoration: none;
@@ -48,6 +49,16 @@
 #cssmenu > ul > li.active {
   border-bottom: none;
 }
+.editor-label {
+    color: #0072c6;
+    font-weight: bold;
+}
+/* ReSharper disable once Html.TagNotResolved */
+.text-body-field {
+    width: 500px;
+    height: 400px;
+}
+
 #cssmenu > ul > li.active > a {
   background: #0072c6;
   background: -moz-linear-gradient(#0072c6 0%, #0072c6 100%);
@@ -59,7 +70,7 @@
 }
 #cssmenu > ul > li.has-sub > a:after {
   content: "";
-  position: absolute;
+  position:absolute;
   top: 10px;
   right: 10px;
   border: 5px solid transparent;

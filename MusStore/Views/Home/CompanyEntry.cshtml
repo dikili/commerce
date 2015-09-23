@@ -7,32 +7,41 @@
 <h2></h2>
 
 
-<form method="post" action="/Home/CompanyEntry" enctype="multipart/form-data">
+<form id="companyEntry"method="post" action="/Home/CompanyEntry" enctype="multipart/form-data">
 
     <fieldset>
-        <legend>Please Enter Your Company's Product Details Briefly</legend>
+        <legend class="editor-label">Please Enter Your Company's Product Details Briefly</legend>
+          <div class="editor-label">
+              Title
+        </div>
         <div class="editor-field">
-            @Html.EditorFor(model => model.Title)
-            @Html.ValidationMessageFor(model => model.Title)
+            @* @Html.EditorFor(model => model.Title)
+            @Html.ValidationMessageFor(model => model.Title)*@
+            <input type="text"></input>
         </div>
 
         <div class="editor-label">
-            @Html.LabelFor(model => model.Body)
+            Description of the company,products...
         </div>
-        
-        <div class="editor-field">
-            @Html.TextBoxFor(model => model.Body, new { width="250px", height="300px", maxlenght=2000,multiline=true})
-            @Html.ValidationMessageFor(model => model.Body)
+       
+        <div class="editor-field-body">
+            @*  @Html.EditorFor(model => model.Body,new { @class="text-body-field" })
+            @Html.ValidationMessageFor(model => model.Body)*@
+            <textarea class="text-body-field"></textarea>
         </div>
-        <label for="file">Upload Image:</label>
+        <div class="editor-label">
+            Upload Image
+        </div>
         <input type="file" name="file" id="file" /><br><br>
-
         <p>
-            <input type="submit" value="Submit" />
+
+             <input value="someone@nowhere.com" class="validate[required,custom[email]]" type="text" name="email" id="email" />
+
+            <input type="submit" value="Submit"/>
         </p>
     </fieldset>
 
 </form> 
-}
+
 
     

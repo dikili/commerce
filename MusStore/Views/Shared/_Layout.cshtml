@@ -22,6 +22,7 @@
     <link href="~/Content/styles.css" rel="stylesheet" />
     <link href="~/Content/Template/style/bootstrap.css" rel="stylesheet">
   <link rel="stylesheet" href="~/Content/Template/style/font-awesome.css">
+    <link href="~/Content/validationEngine.jquery.css" rel="stylesheet" />
   <!--[if IE 7]>
   <link rel="stylesheet" href="~/Content/Template/style/font-awesome-ie7.css">
   <![endif]-->		
@@ -248,11 +249,19 @@
 
 <!-- JS -->
     <script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
+    <script src="~/Scripts/jquery.validationEngine.js"></script>
+    <script src="~/Scripts/jquery.validationEngine-en.js"></script>
 @*<script src="~/Scripts/jquery-1.8.2.min.js"></script>*@
 @*<script src="~/scripts/easing.js"></script>*@
 <script src="~/scripts/bootstrap.js"></script>
 <script type="text/javascript" src="~/scripts/ddlevelsmenu.js"></script>
-    <script src="~/Scripts/script.js"></script>
+<script src="~/Scripts/script.js"></script>
+
+    <script>
+        $(document).ready(function () {
+            $("#companyEntry").validationEngine();
+        });
+</script>
 @*<script type="text/javascript" src="~/scripts/flexslider.js"></script>
 <script type="text/javascript" src="~/scripts/jquery.prettyPhoto.js"></script>*@
  @*<script src="~/Scripts/custom.min.js"></script>*@

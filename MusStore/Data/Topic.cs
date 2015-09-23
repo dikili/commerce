@@ -11,6 +11,7 @@ namespace MusStore.Data
     public class Topic
     {
         public int Id { get; set; }
+        
         public string Title  { get; set; }
         [DataType(DataType.MultilineText)]
         public string Body { get; set; }
