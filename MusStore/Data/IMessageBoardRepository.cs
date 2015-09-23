@@ -12,6 +12,8 @@ namespace MusStore.Data
         Topic GetTopic(int? Id);
         IQueryable<Topic> GetTopicsIncludingReplies();
         IQueryable<Reply> GetRepliesByTopic(int topicId);
+        IQueryable<Company> GetCompanies();
+        Company GetCompany(int? Id);
 
         bool Save();
 

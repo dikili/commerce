@@ -9,7 +9,7 @@ namespace MusStore.Data
 {
     public class Company
     {
-        [Key, DatabaseGenerated(DatabaseGeneratedOption.Identity)]
+        [Key, DatabaseGenerated(DatabaseGeneratedOption.None)]
         [Column("Id")]
         public int Id { get; set; }
         public string CompanyName { get; set; }

@@ -54,14 +54,28 @@ namespace MusStore.Controllers
         public ActionResult CompanyEntry(HttpPostedFileBase file,CompanyTopic company)
         {
             // This needs to save the file, get the path form the topic and save both the topic and the company
-
+            // Here we save the file as well as we have all the information to process 
+            // both topics and company data so all these objects need to be formed and save here if not server side errors 
+            // should be thrown...
+            string path="";
             if (file != null && file.ContentLength > 0)
                 try
                 {
+                    //  I do not care what name they used for the file itself...
+                    //  string path = Path.Combine(Server.MapPath("~/Content/Images"),
+                    //  Path.GetFileName(file.FileName));
+                    
+                    //save the passed image;
                    
-                    string path = Path.Combine(Server.MapPath("~/Content/Images"),
-                                               Path.GetFileName(file.FileName));
+                     path = Path.Combine(Server.MapPath("~/Content/Images"),
+                                              "Company"+ ++_repo.GetCompanies().OrderByDescending(p => p.Id).FirstOrDefault().Id);
+
+
                     file.SaveAs(path);
+                    //path to be save to the database;
+                    path = "/Content/Images/Company" +
+                           _repo.GetCompanies().OrderByDescending(p => p.Id).FirstOrDefault().Id;
+
                     ViewBag.Message = "File uploaded successfully";
                 }
                 catch (Exception ex)
@@ -72,6 +86,24 @@ namespace MusStore.Controllers
             {
                 ViewBag.Message = "You have not specified a file.";
             }
+            
+            int id = _repo.GetCompanies().OrderByDescending(p => p.Id).FirstOrDefault().Id;
+
+           
+            var comp = new Company {CompanyName = company.CompanyName};
+            _repo.AddCompany(comp);
+            
+            var listing = new Topic
+            {
+                Body = company.Body,
+                CompanyId = id,
+                Created = DateTime.Now,
+                isVisible = false,
+                Path = path,
+                Title = company.Title
+            };
+            _repo.AddTopic(listing);
+
             return View();
         }
 
