@@ -3,27 +3,18 @@
 
 
 <div class="span3" style="margin-left: 0px" id='cssmenu'>
-              <ul>
-                  @* <li class='active'><a href='#'><span><i><b>Industries</b></i></span></a></li>*@
 
-                  <li class='has-sub'>
-                      <a href='#'><span>Products</span></a>
-                      <ul>
-                          @foreach(var item in Model)
-                          {
-                              <li><a href="/Home/Index/"@item.CompanyId/>
-                                  <span>@item.Title</span> </li>
-                          }
 
-                      </ul>
-                  </li>
-                  @*<li class='has-sub'>
-                      <a href='#'><span>Textile</span></a>
-                      <ul>
-                          <li><a href='#'><span>Company 1</span></a></li>
-                          <li class='last'><a href='#'><span>Contact</span></a></li>
-                      </ul>
-                  </li>
-                  <li class='last'><a href='#'><span>Contact</span></a></li>*@
-              </ul>
+            @foreach(var item in Model)
+            {
+                <ul>
+                    <li class='has-sub'>
+                        <a href='#'><span>@item.ProductCategory</span></a>
+                        <ul>
+                            <li><a href="/Home/Index/"@item.CompanyId/>
+                                <span>@item.Title</span> </li>
+                        </ul>
+                    </li>
+                </ul>
+            }
  </div>
