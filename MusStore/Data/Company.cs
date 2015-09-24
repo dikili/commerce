@@ -11,8 +11,9 @@ namespace MusStore.Data
     {
         [Key, DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         [Column("Id")]
-        public int Id { get; set; }
+        public int Id { get; private set; }
+
         public string CompanyName { get; set; }
-        public ICollection<Topic> Topics { get; set; }
+        public virtual ICollection<Topic> Topics { get; set; }
     }
 }

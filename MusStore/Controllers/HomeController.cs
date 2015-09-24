@@ -23,7 +23,7 @@ namespace MusStore.Controllers
             _repo = repo;
         }
         [HttpGet]
-        public ActionResult Index(int? Id)
+        public ActionResult Index(int Id=14)
         {
 
             //var topic = _repo.GetTopics()
@@ -58,6 +58,7 @@ namespace MusStore.Controllers
             // both topics and company data so all these objects need to be formed and save here if not server side errors 
             // should be thrown...
             string path="";
+            int idCompany=0;
             if (file != null && file.ContentLength > 0)
                 try
                 {
@@ -66,9 +67,9 @@ namespace MusStore.Controllers
                     //  Path.GetFileName(file.FileName));
                     
                     //save the passed image;
-                   
+                     idCompany = _repo.GetCompanies().OrderByDescending(p => p.Id).FirstOrDefault().Id;
                      path = Path.Combine(Server.MapPath("~/Content/Images"),
-                                              "Company"+ ++_repo.GetCompanies().OrderByDescending(p => p.Id).FirstOrDefault().Id);
+                                              "Company"+ ++idCompany);
 
 
                     file.SaveAs(path);
@@ -86,23 +87,25 @@ namespace MusStore.Controllers
             {
                 ViewBag.Message = "You have not specified a file.";
             }
-            
-            int id = _repo.GetCompanies().OrderByDescending(p => p.Id).FirstOrDefault().Id;
 
+          
+
+
+            var comp = new Company { CompanyName = company.CompanyName};
+            _repo.AddCompany(comp);
            
-            var comp = new Company {CompanyName = company.CompanyName};
-           // _repo.AddCompany(comp);
-            
             var listing = new Topic
             {
                 Body = company.Body,
-                CompanyId = id,
+                CompanyId = idCompany,
                 Created = DateTime.Now,
                 isVisible = false,
                 Path = path,
                 Title = company.Title
             };
             _repo.AddTopic(listing);
+
+            _repo.Save();
 
             return View();
         }

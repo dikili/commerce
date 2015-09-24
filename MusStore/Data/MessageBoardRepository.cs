@@ -42,7 +42,7 @@ namespace MusStore.Data
         {
             try
             {
-                _ctx.Topics.Add(newTopic);
+                _ctx.Topics.Add(new Topic { Body = newTopic.Body, Title = newTopic.Title, Created = DateTime.Now, Path = newTopic.Path, isVisible = false, CompanyId = newTopic.CompanyId});
                 return true;
             }
             catch (Exception ex)
@@ -68,7 +68,7 @@ namespace MusStore.Data
             return _ctx.Topics;
         }
 
-        public Topic GetTopic(int? Id)
+        public Topic GetTopic(int Id)
         {
             // var ctx=new MessageBoardContext(); this is expensive and this needs to be disposed properly as well.
             return _ctx.Topics.Where(p=>p.Id==Id).FirstOrDefault();
@@ -79,7 +79,7 @@ namespace MusStore.Data
             return _ctx.Companies;
         }
 
-        public Company GetCompany(int? Id)
+        public Company GetCompany(int Id)
         {
             return _ctx.Companies.FirstOrDefault(p => p.Id == Id);
         }
