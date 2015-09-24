@@ -2,28 +2,25 @@
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
-using System.Net.NetworkInformation;
-using System.Security.AccessControl;
 using System.Web;
 
-namespace MusStore.Data
+namespace MusStore.Models
 {
-    public class Topic
+    public class Menu
     {
-        public int Id { get; set; }
-        
-        public string Title  { get; set; }
+        public string Title { get; set; }
         [DataType(DataType.MultilineText)]
         public string Body { get; set; }
         public DateTime Created { get; set; }
         //public bool Flagged { get; set; }
-        public string Path { get; set; }
-    
+        
+
         public int CompanyId { get; set; }
 
         public bool isVisible { get; set; }
-
-
-        public object CompanyName { get; set; }
+        
+        public string CompanyName { get; set; }
+        public string Path { get; set; }
+        public string Category { get; set; }
     }
 }

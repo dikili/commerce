@@ -23,26 +23,29 @@ namespace MusStore.Controllers
             _repo = repo;
         }
         [HttpGet]
-        public ActionResult Index(int Id=14)
+        public ActionResult Index()
         {
 
             //var topic = _repo.GetTopics()
             //    .OrderByDescending(t => t.Created)
             //    .Take(25).ToList();
-           var topic=new MusStore.Data.Topic();
+           //var topic=new MusStore.Data.Topic();
            
-            if (Id == 0 || Id==null)
-            {
-                 topic = _repo.GetTopics().FirstOrDefault();
-            }
-            else
-            {
-                 topic = _repo.GetTopic(Id);  
-            }
+           // if (Id == 0 || Id==null)
+           // {
+           //      topic = _repo.GetTopics().FirstOrDefault();
+           // }
+           // else
+           // {
+           //      topic = _repo.GetTopic(Id);  
+           // }
  
-
-            return View(topic);
+           // List<Topic> list1=new List<Topic>();
+           // list1.Add(topic);
+            return View(_repo.GetTopics());
         }
+
+     
 
         [HttpGet]
         public ActionResult CompanyEntry()
