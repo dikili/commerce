@@ -25,5 +25,7 @@ namespace MusStore.Data
 
 
         public object CompanyName { get; set; }
+
+        public string  ProductCategory { get; set; }
     }
 }

@@ -21,6 +21,6 @@ namespace MusStore.Models
         
         public string CompanyName { get; set; }
         public string Path { get; set; }
-        public string Category { get; set; }
+        public string ProductCategory { get; set; }
     }
 }

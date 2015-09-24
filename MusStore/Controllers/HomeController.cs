@@ -22,29 +22,47 @@ namespace MusStore.Controllers
             _mail = mail;
             _repo = repo;
         }
-        [HttpGet]
-        public ActionResult Index()
-        {
+        //[HttpGet]
+        //public ActionResult Index()
+        //{
 
-            //var topic = _repo.GetTopics()
-            //    .OrderByDescending(t => t.Created)
-            //    .Take(25).ToList();
-           //var topic=new MusStore.Data.Topic();
+        //    //var topic = _repo.GetTopics()
+        //    //    .OrderByDescending(t => t.Created)
+        //    //    .Take(25).ToList();
+        //   //var topic=new MusStore.Data.Topic();
            
-           // if (Id == 0 || Id==null)
-           // {
-           //      topic = _repo.GetTopics().FirstOrDefault();
-           // }
-           // else
-           // {
-           //      topic = _repo.GetTopic(Id);  
-           // }
+        //   // if (Id == 0 || Id==null)
+        //   // {
+        //   //      topic = _repo.GetTopics().FirstOrDefault();
+        //   // }
+        //   // else
+        //   // {
+        //   //      topic = _repo.GetTopic(Id);  
+        //   // }
  
-           // List<Topic> list1=new List<Topic>();
-           // list1.Add(topic);
-            return View(_repo.GetTopics());
-        }
+        //   // List<Topic> list1=new List<Topic>();
+        //   // list1.Add(topic);
+        //    return View(_repo.GetTopics());
+        //}
+        [HttpGet]
+        public ActionResult Index(int Id=0)
+        {
+            var topic = new List<Topic>();
 
+            if (Id == 0 || Id == null)
+            {
+                foreach (var item in _repo.GetTopics())
+                {
+                    topic.Add(item);
+                }
+            }
+            else
+            {
+                topic.Add(_repo.GetTopics().FirstOrDefault());
+               
+            }
+            return View(topic);
+        }
      
 
         [HttpGet]
