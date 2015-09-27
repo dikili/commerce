@@ -1,0 +1,20 @@
+﻿@model  IEnumerable<MusStore.Models.Menu>
+
+<div class="span3" style="margin-left: 0px" id='cssmenu'>
+    <ul>
+       
+            @foreach (var item in Model)
+            {
+                <li class='has-sub'>
+                    <a href='#'><span>@item.ProductCategory</span></a>
+                    <ul>
+                        <li>                           
+                                <a href="/Home/Index/@item.CompanyId">@item.CompanyName</a>
+
+                        </li>
+                    </ul>
+                </li>
+            }
+                
+    </ul>
+</div>

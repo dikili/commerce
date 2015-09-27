@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MusStore.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -42,7 +43,7 @@ namespace MusStore.Data
         {
             try
             {
-                _ctx.Topics.Add(new Topic { Body = newTopic.Body, Title = newTopic.Title, Created = DateTime.Now, Path = newTopic.Path, isVisible = false, CompanyId = newTopic.CompanyId});
+                _ctx.Topics.Add(new Topic { Body = newTopic.Body, Title = newTopic.Title, Created = DateTime.Now, Path = newTopic.Path, isVisible = true, CompanyId = newTopic.CompanyId,ProductCategory="UnCategorized"});
                 return true;
             }
             catch (Exception ex)
@@ -68,10 +69,32 @@ namespace MusStore.Data
             return _ctx.Topics;
         }
 
+        public List<Menu> GetMenu()
+        {
+            List<Menu> menu=new List<Menu>();
+            var topics = _ctx.Topics;
+            var companies = _ctx.Companies;
+
+            foreach (var item in topics)
+            {
+                if(item.isVisible)
+                { 
+                    var menuitem = new Menu();
+                    menuitem.CompanyId = item.CompanyId;
+                    menuitem.CompanyName =  companies.Where(p => p.Id == item.CompanyId).FirstOrDefault().CompanyName;
+                    menuitem.Path = item.Path;
+                    menuitem.ProductCategory = item.ProductCategory;
+                    menu.Add(menuitem);
+                }
+            }
+
+            return menu;
+        }
+
         public Topic GetTopic(int Id)
         {
             // var ctx=new MessageBoardContext(); this is expensive and this needs to be disposed properly as well.
-            return _ctx.Topics.Where(p=>p.Id==Id).FirstOrDefault();
+            return _ctx.Topics.Where(p=>p.CompanyId==Id).FirstOrDefault();
         }
 
         public IQueryable<Company> GetCompanies()

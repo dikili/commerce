@@ -146,16 +146,15 @@
       <div class="row">
           <div><span><i><b>-----------Industries-------------</b></i></span></div>
           @*partial view needs to be aligned here*@
-          @Html.Partial("~/Views/menu.cshtml")
+          @*@Html.Partial("~/Views/menu.cshtml")*@
+          @{
+              Html.RenderAction("Menu", "Home");
+              
+          }
           <div class="span3"></div>
           <div class="span9">
-
               @RenderBody()
-
           </div>
-
-
-
       </div>
   </div>
 </div> 

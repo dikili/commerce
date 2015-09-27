@@ -149,6 +149,7 @@
     <Compile Include="Data\MessageBoardRepository.cs" />
     <Compile Include="Data\Reply.cs" />
     <Compile Include="Data\Topic.cs" />
+    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\CompanyTopic.cs" />
     <Compile Include="Models\ContactModel.cs" />
     <Compile Include="Controllers\HomeController.cs" />
@@ -312,10 +313,10 @@
     <Content Include="Views\Home\MyMessages.cshtml" />
     <Content Include="Views\Home\CompanyEntry.cshtml" />
     <Content Include="Views\menu.cshtml" />
+    <Content Include="Views\Home\Menu.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Migrations\" />
     <Folder Include="ViewModels\" />
   </ItemGroup>
   <ItemGroup>

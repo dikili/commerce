@@ -58,7 +58,7 @@ namespace MusStore.Controllers
             }
             else
             {
-                topic.Add(_repo.GetTopics().FirstOrDefault());
+                topic.Add(_repo.GetTopic(Id));
                
             }
             return View(topic);
@@ -71,6 +71,14 @@ namespace MusStore.Controllers
             return View();
         }
 
+        //[HttpGet]
+      
+        public ActionResult Menu()
+        {
+            return PartialView("Menu", _repo.GetMenu());
+        }
+       
+      
         [HttpPost]
         public ActionResult CompanyEntry(HttpPostedFileBase file,CompanyTopic company)
         {
@@ -114,13 +122,13 @@ namespace MusStore.Controllers
 
             var comp = new Company { CompanyName = company.CompanyName};
             _repo.AddCompany(comp);
-           
+            _repo.Save();
             var listing = new Topic
             {
                 Body = company.Body,
-                CompanyId = idCompany,
+                CompanyId = _repo.GetCompanies().OrderByDescending(p => p.Id).FirstOrDefault().Id,
                 Created = DateTime.Now,
-                isVisible = false,
+                isVisible = true,
                 Path = path,
                 Title = company.Title
             };

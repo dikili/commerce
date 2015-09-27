@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MusStore.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -14,7 +15,7 @@ namespace MusStore.Data
         IQueryable<Reply> GetRepliesByTopic(int topicId);
         IQueryable<Company> GetCompanies();
         Company GetCompany(int Id);
-
+        List<Menu> GetMenu();
         bool Save();
 
         bool AddTopic(Topic newTopic);

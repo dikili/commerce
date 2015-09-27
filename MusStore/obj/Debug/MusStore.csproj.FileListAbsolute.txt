@@ -213,3 +213,5 @@ C:\Source\commerce\MusStore\bin\System.Web.WebPages.Razor.xml
 C:\Source\commerce\MusStore\obj\Debug\MusStore.dll
 C:\Source\commerce\MusStore\obj\Debug\MusStore.pdb
 C:\Source\commerce\MusStore\obj\Debug\MusStore.csprojResolveAssemblyReference.cache
+C:\Users\Fatih\Desktop\commerce\MusStore\bin\System.Web.Mvc.xml
+C:\Users\Fatih\Desktop\commerce\MusStore\obj\Debug\MusStore.csprojResolveAssemblyReference.cache

@@ -23,9 +23,6 @@ namespace MusStore.Data
 
         public bool isVisible { get; set; }
 
-
-        public object CompanyName { get; set; }
-
         public string  ProductCategory { get; set; }
     }
 }

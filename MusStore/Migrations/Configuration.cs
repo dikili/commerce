@@ -9,7 +9,7 @@ namespace MusStore.Migrations
     {
         public Configuration()
         {
-            AutomaticMigrationsEnabled = false;
+            AutomaticMigrationsEnabled = true;
         }
 
         protected override void Seed(MusStore.Data.MessageBoardContext context)
