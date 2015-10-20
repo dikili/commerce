@@ -98,13 +98,13 @@ namespace MusStore.Controllers
                     //save the passed image;
                      idCompany = _repo.GetCompanies().OrderByDescending(p => p.Id).FirstOrDefault().Id;
                      path = Path.Combine(Server.MapPath("~/Content/Images"),
-                                              "Company"+ ++idCompany);
+                                              "Company"+ ++idCompany+Path.GetExtension(file.FileName));
 
 
                     file.SaveAs(path);
                     //path to be save to the database;
                     path = "/Content/Images/Company" +
-                           _repo.GetCompanies().OrderByDescending(p => p.Id).FirstOrDefault().Id;
+                           _repo.GetCompanies().OrderByDescending(p => p.Id).FirstOrDefault().Id + Path.GetExtension(file.FileName);
 
                     ViewBag.Message = "File uploaded successfully";
                 }
