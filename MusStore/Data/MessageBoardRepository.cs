@@ -69,26 +69,42 @@ namespace MusStore.Data
             return _ctx.Topics;
         }
 
-        public List<Menu> GetMenu()
+        public CategoryCompany GetMenu()
         {
             List<Menu> menu=new List<Menu>();
             var topics = _ctx.Topics;
             var companies = _ctx.Companies;
+            CategoryCompany displayMenu = new CategoryCompany();
+            displayMenu.CompanyCategory = new Dictionary<string, List<Menu>>();
+
+            
 
             foreach (var item in topics)
             {
                 if(item.isVisible)
-                { 
+                {
                     var menuitem = new Menu();
                     menuitem.CompanyId = item.CompanyId;
-                    menuitem.CompanyName =  companies.Where(p => p.Id == item.CompanyId).FirstOrDefault().CompanyName;
+                    menuitem.CompanyName = companies.Where(p => p.Id == item.CompanyId).FirstOrDefault().CompanyName;
                     menuitem.Path = item.Path;
                     menuitem.ProductCategory = item.ProductCategory;
-                    menu.Add(menuitem);
+                    //menu.Add(menuitem);
+
+                    if (displayMenu.CompanyCategory.ContainsKey(item.ProductCategory))
+                    {
+
+                        displayMenu.CompanyCategory[item.ProductCategory].Add(menuitem);
+                    }
+                    else
+                    {
+                      displayMenu.CompanyCategory.Add(item.ProductCategory,new List<Menu> {menuitem});
+                     
+                    }
+
                 }
             }
 
-            return menu;
+            return displayMenu;
         }
 
         public Topic GetTopic(int Id)

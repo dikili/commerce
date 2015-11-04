@@ -14,4 +14,10 @@ namespace MusStore.Models
         public string Path { get; set; }
         public string ProductCategory { get; set; }
     }
+
+    public class CategoryCompany
+    {
+        public Dictionary<string, List<Menu>> CompanyCategory { get; set; }
+    
+    }
 }

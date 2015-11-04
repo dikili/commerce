@@ -1,20 +1,53 @@
-﻿@model  IEnumerable<MusStore.Models.Menu>
+﻿@using MusStore.Models
+@model  MusStore.Models.CategoryCompany
 
 <div class="span3" style="margin-left: 0px" id='cssmenu'>
     <ul>
-       
-            @foreach (var item in Model)
+            @foreach (var item in Model.CompanyCategory)
             {
                 <li class='has-sub'>
-                    <a href='#'><span>@item.ProductCategory</span></a>
+                    <a href='#'><span>@item.Key</span></a>
                     <ul>
-                        <li>                           
-                                <a href="/Home/Index/@item.CompanyId">@item.CompanyName</a>
-
-                        </li>
+                        @foreach (var company in @item.Value)
+                        {
+                            <li>
+                                <a href="/Home/Index/@company.CompanyId">@company.CompanyName</a>
+                            </li>}
                     </ul>
                 </li>
             }
-                
+
+
+        @*foreach (var key in item.CompanyCategory.Keys)
+        {
+        <li class='has-sub'>
+            <a href='#'><span>@item.CompanyCategory[key]</span></a>
+            <ul>
+                @foreach (var company in @item.CompanyCategory[key])
+                {
+                <li>
+                    <a href="/Home/Index/company.CompanyId">@company.CompanyName</a>
+                </li>}
+            </ul>
+        </li>
+        }*@
+
+
+        @*@for (int i = 0; i < Model.Count(); i++)
+        {
+            <li class='has-sub'>
+                <a href='#'><span>@Model</span></a>
+                <ul>
+                    <li>
+                        <a href="/Home/Index/@item.CompanyId">@item.CompanyName</a>
+
+                    </li>
+                </ul>
+            </li>
+
+        }*@
+
+
+
     </ul>
 </div>

@@ -15,7 +15,7 @@ namespace MusStore.Data
         IQueryable<Reply> GetRepliesByTopic(int topicId);
         IQueryable<Company> GetCompanies();
         Company GetCompany(int Id);
-        List<Menu> GetMenu();
+        CategoryCompany GetMenu();
         bool Save();
 
         bool AddTopic(Topic newTopic);
