@@ -47,6 +47,14 @@
       <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
       <Private>True</Private>
     </Reference>
+    <Reference Include="Microsoft.AspNet.Identity.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.Identity.Core.2.2.1\lib\net45\Microsoft.AspNet.Identity.Core.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.Identity.EntityFramework, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.Identity.EntityFramework.2.2.1\lib\net45\Microsoft.AspNet.Identity.EntityFramework.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="Newtonsoft.Json, Version=7.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
       <HintPath>..\packages\Newtonsoft.Json.7.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
@@ -69,6 +77,7 @@
     <Reference Include="System.Drawing" />
     <Reference Include="System.Runtime.Serialization" />
     <Reference Include="System.Security" />
+    <Reference Include="System.ServiceModel" />
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
     <Reference Include="System.Web.ApplicationServices" />
@@ -140,15 +149,27 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\NinjectWebCommon.cs" />
-    <Compile Include="Controllers\RepliesController.cs" />
-    <Compile Include="Controllers\TopicsController.cs" />
-    <Compile Include="Data\Company.cs" />
-    <Compile Include="Data\IMessageBoardRepository.cs" />
+    <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Company.cs" />
+    <Compile Include="Data\CompanyRepository.cs" />
+    <Compile Include="Data\ICompanyRepository.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Data\IRepository.cs" />
+    <Compile Include="Data\ITopicRepository.cs" />
+    <Compile Include="Data\IUnitOfWork.cs" />
     <Compile Include="Data\MessageBoardContext.cs" />
-    <Compile Include="Data\MessageBoardMigrationsConfiguration.cs" />
-    <Compile Include="Data\MessageBoardRepository.cs" />
     <Compile Include="Data\Reply.cs" />
     <Compile Include="Data\Topic.cs" />
+    <Compile Include="Data\TopicRepository.cs" />
+    <Compile Include="Data\UnitOfWork.cs" />
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\CompanyTopic.cs" />
     <Compile Include="Models\ContactModel.cs" />
@@ -158,6 +179,11 @@
     </Compile>
     <Compile Include="Models\Menu.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Service References\PairIntegration\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
     <Compile Include="Services\IMailService.cs" />
     <Compile Include="Services\MailService.cs" />
     <Compile Include="Services\MockMailService.cs" />
@@ -276,6 +302,7 @@
     <Content Include="Content\Template\style\red.css" />
     <Content Include="Content\Template\style\style.css" />
     <Content Include="Content\validationEngine.jquery.css" />
+    <Content Include="Default.aspx" />
     <Content Include="Global.asax" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\custom.js" />
@@ -296,6 +323,13 @@
     <Content Include="Scripts\jquery.validationEngine.js" />
     <Content Include="Scripts\modernizr-2.6.2.js" />
     <Content Include="Scripts\script.js" />
+    <None Include="Service References\PairIntegration\PairIntegrationService.disco" />
+    <None Include="Service References\PairIntegration\configuration91.svcinfo" />
+    <None Include="Service References\PairIntegration\configuration.svcinfo" />
+    <None Include="Service References\PairIntegration\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
     <Content Include="Web.config">
       <SubType>Designer</SubType>
     </Content>
@@ -314,6 +348,16 @@
     <Content Include="Views\Home\CompanyEntry.cshtml" />
     <Content Include="Views\menu.cshtml" />
     <Content Include="Views\Home\Menu.cshtml" />
+    <None Include="Service References\PairIntegration\PairIntegrationService.wsdl" />
+    <None Include="Service References\PairIntegration\PairIntegrationService.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\PairIntegration\PairIntegrationService1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\PairIntegration\PairIntegrationService2.xsd">
+      <SubType>Designer</SubType>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -342,6 +386,18 @@
   </ItemGroup>
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadataStorage Include="Service References\PairIntegration\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\PairIntegrationService\PairIntegrationService.csproj">
+      <Project>{88e2a932-c1ba-4cb9-b0e4-441094d037d9}</Project>
+      <Name>PairIntegrationService</Name>
+    </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

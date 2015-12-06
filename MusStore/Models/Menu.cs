@@ -8,7 +8,7 @@ namespace MusStore.Models
 {
     public class Menu
     {        
-        public int CompanyId { get; set; }
+        public int TopicId { get; set; }
 
         public string CompanyName { get; set; }
         public string Path { get; set; }

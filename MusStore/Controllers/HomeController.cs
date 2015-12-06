@@ -9,18 +9,27 @@ using MusStore.Models;
 using MusStore.Services;
 using System.IO;
 
+
 namespace MusStore.Controllers
 {
     public class HomeController : Controller
     {
         private IMailService _mail;
-        private IMessageBoardRepository _repo;
-        //
+   
+        private ITopicRepository _topicRepo;
+        private ICompanyRepository _companyRepo;
+        private IUnitOfWork _iUnitOfWork;
         // GET: /Home/
-        public HomeController(IMailService mail,IMessageBoardRepository repo)
+        public HomeController(IMailService mail,ITopicRepository repository,ICompanyRepository compRepo,IUnitOfWork unitOfWork)
         {
             _mail = mail;
-            _repo = repo;
+          
+            //_topicRepo = repository;
+            //_companyRepo = compRepo;
+
+            _topicRepo = unitOfWork.Topics;
+            _companyRepo = unitOfWork.Companies;
+            _iUnitOfWork = unitOfWork;
         }
         //[HttpGet]
         //public ActionResult Index()
@@ -51,14 +60,21 @@ namespace MusStore.Controllers
 
             if (Id == 0 || Id == null)
             {
-                foreach (var item in _repo.GetTopics())
+//                foreach (var item in _repo.GetTopics())
+//                {
+//                    topic.Add(item);
+//                }
+                foreach (var item in _topicRepo.GetAll())
                 {
                     topic.Add(item);
                 }
+
             }
             else
             {
-                topic.Add(_repo.GetTopic(Id));
+             //   topic.Add(_repo.GetTopic(Id));
+
+                topic.Add(_topicRepo.GetById(Id));
                
             }
             return View(topic);
@@ -75,7 +91,7 @@ namespace MusStore.Controllers
       
         public ActionResult Menu()
         {
-            return PartialView("Menu", _repo.GetMenu());
+            return PartialView("Menu", GetMenu());
         }
        
       
@@ -88,53 +104,54 @@ namespace MusStore.Controllers
             // should be thrown...
             string path="";
             int idCompany=0;
+            int flag = 0;
             if (file != null && file.ContentLength > 0)
                 try
                 {
-                    //  I do not care what name they used for the file itself...
-                    //  string path = Path.Combine(Server.MapPath("~/Content/Images"),
-                    //  Path.GetFileName(file.FileName));
+                    var comp = new Company { CompanyName = company.CompanyName };
+                    _companyRepo.Save(comp);
                     
                     //save the passed image;
-                     idCompany = _repo.GetCompanies().OrderByDescending(p => p.Id).FirstOrDefault().Id;
-                     path = Path.Combine(Server.MapPath("~/Content/Images"),
-                                              "Company"+ ++idCompany+Path.GetExtension(file.FileName));
-
+                    if (!_companyRepo.GetAll().Any())
+                    {
+                        _iUnitOfWork.Commit();
+                        flag = 1;
+                    }
+                   
+                    idCompany = _companyRepo.GetAll().OrderByDescending(p => p.Id).FirstOrDefault().Id;
+                    //_topicRepo.GetAll().OrderByDescending(p => p.Id).FirstOrDefault().Id;
+                     path = flag==1? Path.Combine(Server.MapPath("~/Content/Images"),
+                         "Company" + idCompany + Path.GetExtension(file.FileName)) : Path.Combine(Server.MapPath("~/Content/Images"),
+                         "Company" + ++idCompany + Path.GetExtension(file.FileName));
 
                     file.SaveAs(path);
-                    //path to be save to the database;
+                  //  path to be save to the database;
                     path = "/Content/Images/Company" +
-                           _repo.GetCompanies().OrderByDescending(p => p.Id).FirstOrDefault().Id + Path.GetExtension(file.FileName);
-
+                           idCompany + Path.GetExtension(file.FileName);
                     ViewBag.Message = "File uploaded successfully";
                 }
                 catch (Exception ex)
                 {
-                    ViewBag.Message = "ERROR:" + ex.Message.ToString();
+                    ViewBag.Message = "ERROR:" + ex.Message;
                 }
             else
             {
                 ViewBag.Message = "You have not specified a file.";
             }
-
-          
-
-
-            var comp = new Company { CompanyName = company.CompanyName};
-            _repo.AddCompany(comp);
-            _repo.Save();
             var listing = new Topic
             {
                 Body = company.Body,
-                CompanyId = _repo.GetCompanies().OrderByDescending(p => p.Id).FirstOrDefault().Id,
+                CompanyId = idCompany,
                 Created = DateTime.Now,
                 isVisible = true,
                 Path = path,
-                Title = company.Title
+                Title = company.Title,
+                ProductCategory = "UnCategorized"
             };
-            _repo.AddTopic(listing);
 
-            _repo.Save();
+            _topicRepo.Save(listing);
+
+            _iUnitOfWork.Commit();
 
             return View();
         }
@@ -165,6 +182,45 @@ namespace MusStore.Controllers
         public ActionResult MyMessages()
         {
             return View();
+        }
+
+
+        private CategoryCompany GetMenu()
+        {
+            List<MusStore.Models.Menu> menu = new List<MusStore.Models.Menu>();
+            var topics = _topicRepo.GetAll();
+            var companies = _companyRepo.GetAll();
+            CategoryCompany displayMenu = new CategoryCompany();
+            displayMenu.CompanyCategory = new Dictionary<string, List<MusStore.Models.Menu>>();
+
+
+
+            foreach (var item in topics)
+            {
+                if (item.isVisible)
+                {
+                    var menuitem = new Models.Menu();
+                    menuitem.TopicId = item.Id; //we are assigning topic id here since topic related to that company will be displayed
+                    menuitem.CompanyName = companies.Where(p => p.Id == item.CompanyId).FirstOrDefault().CompanyName;
+                    menuitem.Path = item.Path;
+                    menuitem.ProductCategory = item.ProductCategory;
+                    //menu.Add(menuitem);
+
+                    if (displayMenu.CompanyCategory.ContainsKey(item.ProductCategory))
+                    {
+
+                        displayMenu.CompanyCategory[item.ProductCategory].Add(menuitem);
+                    }
+                    else
+                    {
+                        displayMenu.CompanyCategory.Add(item.ProductCategory, new List<MusStore.Models.Menu> { menuitem });
+
+                    }
+
+                }
+            }
+
+            return displayMenu;
         }
     }
 

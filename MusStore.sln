@@ -1,7 +1,12 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 2012
+# Visual Studio 2013
+VisualStudioVersion = 12.0.31101.0
+MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MusStore", "MusStore\MusStore.csproj", "{A9FE202B-7609-48B2-A552-CDDE8A53D342}"
+	ProjectSection(ProjectDependencies) = postProject
+		{88E2A932-C1BA-4CB9-B0E4-441094D037D9} = {88E2A932-C1BA-4CB9-B0E4-441094D037D9}
+	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MusStore.Tests", "MusStore.Tests\MusStore.Tests.csproj", "{8CB089E7-374F-4391-ABEF-35B966C56B09}"
 EndProject
@@ -9,6 +14,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 	ProjectSection(SolutionItems) = preProject
 		WE-settings.xml = WE-settings.xml
 	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PairIntegrationService", "PairIntegrationService\PairIntegrationService.csproj", "{88E2A932-C1BA-4CB9-B0E4-441094D037D9}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -24,6 +31,10 @@ Global
 		{8CB089E7-374F-4391-ABEF-35B966C56B09}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8CB089E7-374F-4391-ABEF-35B966C56B09}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8CB089E7-374F-4391-ABEF-35B966C56B09}.Release|Any CPU.Build.0 = Release|Any CPU
+		{88E2A932-C1BA-4CB9-B0E4-441094D037D9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{88E2A932-C1BA-4CB9-B0E4-441094D037D9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{88E2A932-C1BA-4CB9-B0E4-441094D037D9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{88E2A932-C1BA-4CB9-B0E4-441094D037D9}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

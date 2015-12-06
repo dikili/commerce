@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="709e6540-c02f-45fc-8c3c-741d7824d7ab" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:13244/PairIntegrationService.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="PairIntegrationService.xsd" MetadataType="Schema" ID="a40a6396-affc-415c-ad76-bd17b2c2cade" SourceId="1" SourceUrl="http://localhost:13244/PairIntegrationService.svc?xsd=xsd2" />
+    <MetadataFile FileName="PairIntegrationService1.xsd" MetadataType="Schema" ID="29c74ca4-f6c1-4ca1-84e8-1a57d5c8fc1c" SourceId="1" SourceUrl="http://localhost:13244/PairIntegrationService.svc?xsd=xsd1" />
+    <MetadataFile FileName="PairIntegrationService.disco" MetadataType="Disco" ID="323fd246-1d56-4e35-b957-66539a3f2e47" SourceId="1" SourceUrl="http://localhost:13244/PairIntegrationService.svc?disco" />
+    <MetadataFile FileName="PairIntegrationService2.xsd" MetadataType="Schema" ID="75a23995-174f-4ab3-87ea-ed5901710f64" SourceId="1" SourceUrl="http://localhost:13244/PairIntegrationService.svc?xsd=xsd0" />
+    <MetadataFile FileName="PairIntegrationService.wsdl" MetadataType="Wsdl" ID="06718a51-84e6-47e5-b865-e205482e76d5" SourceId="1" SourceUrl="http://localhost:13244/PairIntegrationService.svc?wsdl" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

@@ -1,3 +1,4 @@
+using MusStore.Controllers;
 using MusStore.Data;
 
 [assembly: WebActivatorEx.PreApplicationStartMethod(typeof(MusStore.App_Start.NinjectWebCommon), "Start")]
@@ -75,7 +76,9 @@ namespace MusStore.App_Start
 
 #endif
             kernel.Bind<MessageBoardContext>().To<MessageBoardContext>().InRequestScope();
-            kernel.Bind<IMessageBoardRepository>().To<MessageBoardRepository>().InRequestScope();
+            kernel.Bind<ITopicRepository>().To<TopicRepository>().InRequestScope();
+            kernel.Bind<ICompanyRepository>().To<CompanyRepository>().InRequestScope();
+            kernel.Bind<IUnitOfWork>().To<UnitOfWork>().InRequestScope();
         }        
     }
 }

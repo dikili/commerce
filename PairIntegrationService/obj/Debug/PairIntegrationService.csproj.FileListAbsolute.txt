@@ -1,0 +1,6 @@
+C:\Users\Fatih\Documents\commerce\PairIntegrationService\bin\PairIntegrationService.dll.config
+C:\Users\Fatih\Documents\commerce\PairIntegrationService\bin\PairIntegrationService.dll
+C:\Users\Fatih\Documents\commerce\PairIntegrationService\bin\PairIntegrationService.pdb
+C:\Users\Fatih\Documents\commerce\PairIntegrationService\obj\Debug\PairIntegrationService.csprojResolveAssemblyReference.cache
+C:\Users\Fatih\Documents\commerce\PairIntegrationService\obj\Debug\PairIntegrationService.dll
+C:\Users\Fatih\Documents\commerce\PairIntegrationService\obj\Debug\PairIntegrationService.pdb
