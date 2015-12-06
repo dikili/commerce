@@ -112,11 +112,11 @@ namespace MusStore.Controllers
                     _companyRepo.Save(comp);
                     
                     //save the passed image;
-                    if (!_companyRepo.GetAll().Any())
-                    {
+                    //if (!_companyRepo.GetAll().Any())
+                    //{
                         _iUnitOfWork.Commit();
                         flag = 1;
-                    }
+                    //}
                    
                     idCompany = _companyRepo.GetAll().OrderByDescending(p => p.Id).FirstOrDefault().Id;
                     //_topicRepo.GetAll().OrderByDescending(p => p.Id).FirstOrDefault().Id;
