@@ -9,7 +9,7 @@ namespace MusStore.Data
         private readonly ICompanyRepository _companies;
         private readonly ITopicRepository _topics;
 
-        public UnitOfWork(MessageBoardContext context, ITopicRepository topics, ICompanyRepository companies)
+        public UnitOfWork(MessageBoardContext context,ITopicRepository topics,ICompanyRepository companies)
         {
             _context = context;
             _topics = topics;
@@ -28,7 +28,7 @@ namespace MusStore.Data
 
         public void Commit()
         {
-            _context.SaveChanges();
+             _context.SaveChanges();
         }
     }
 }

@@ -8,7 +8,8 @@ using MusStore.Controllers;
 
 namespace MusStore.Data
 {
-    public class MessageBoardContext : DbContext    {
+    public class MessageBoardContext : IdentityDbContext<AppUser>
+    {
         public MessageBoardContext()
             : base("abc")
         {
