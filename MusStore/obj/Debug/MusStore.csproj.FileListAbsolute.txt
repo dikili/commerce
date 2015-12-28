@@ -292,3 +292,16 @@ C:\Source\AdPost\MusStore\bin\System.Web.WebPages.Razor.xml
 C:\Source\AdPost\MusStore\obj\Debug\MusStore.csprojResolveAssemblyReference.cache
 C:\Source\AdPost\MusStore\obj\Debug\MusStore.dll
 C:\Source\AdPost\MusStore\obj\Debug\MusStore.pdb
+C:\Source\AdPost\MusStore\bin\Microsoft.AspNet.Identity.Owin.dll
+C:\Source\AdPost\MusStore\bin\Microsoft.Owin.dll
+C:\Source\AdPost\MusStore\bin\Microsoft.Owin.Host.SystemWeb.dll
+C:\Source\AdPost\MusStore\bin\Microsoft.Owin.Security.Cookies.dll
+C:\Source\AdPost\MusStore\bin\Microsoft.Owin.Security.dll
+C:\Source\AdPost\MusStore\bin\Microsoft.Owin.Security.OAuth.dll
+C:\Source\AdPost\MusStore\bin\Owin.dll
+C:\Source\AdPost\MusStore\bin\Microsoft.AspNet.Identity.Owin.xml
+C:\Source\AdPost\MusStore\bin\Microsoft.Owin.xml
+C:\Source\AdPost\MusStore\bin\Microsoft.Owin.Host.SystemWeb.xml
+C:\Source\AdPost\MusStore\bin\Microsoft.Owin.Security.xml
+C:\Source\AdPost\MusStore\bin\Microsoft.Owin.Security.Cookies.xml
+C:\Source\AdPost\MusStore\bin\Microsoft.Owin.Security.OAuth.xml

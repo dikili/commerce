@@ -4,10 +4,11 @@ using System.Linq;
 using System.Web;
 using Microsoft.AspNet.Identity.EntityFramework;
 
-namespace MusStore.Authentication
+namespace MusStore
 {
-    public class AppUser :IdentityUser
+    public class AppRole : IdentityRole
     {
-        public string Country { get; set; }
+        public AppRole() : base() { }
+        public AppRole(string name) : base(name) { }
     }
 }
