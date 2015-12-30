@@ -4,10 +4,11 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using System.Web.UI.WebControls;
-using MusStore.Data;
 using MusStore.Models;
 using MusStore.Services;
 using System.IO;
+using EF.Core;
+using EF.Data;
 
 
 namespace MusStore.Controllers
@@ -20,7 +21,7 @@ namespace MusStore.Controllers
         private ICompanyRepository _companyRepo;
         private IUnitOfWork _iUnitOfWork;
         // GET: /Home/
-        public HomeController(IMailService mail,ITopicRepository repository,ICompanyRepository compRepo,IUnitOfWork unitOfWork)
+        public HomeController(IMailService mail,IUnitOfWork unitOfWork)
         {
             _mail = mail;
           
@@ -58,16 +59,12 @@ namespace MusStore.Controllers
         {
             var topic = new List<Topic>();
 
-            if (Id == 0 || Id == null)
+            if (Id == 0)
             {
-//                foreach (var item in _repo.GetTopics())
-//                {
-//                    topic.Add(item);
-//                }
-                foreach (var item in _topicRepo.GetAll())
-                {
-                    topic.Add(item);
-                }
+              foreach (var item in _topicRepo.GetAll())
+              {
+                 topic.Add(item);
+              }
 
             }
             else
@@ -143,10 +140,10 @@ namespace MusStore.Controllers
                 Body = company.Body,
                 CompanyId = idCompany,
                 Created = DateTime.Now,
-                isVisible = true,
+             //   isVisible = true,
                 Path = path,
                 Title = company.Title,
-                ProductCategory = "UnCategorized"
+            //    ProductCategory = "UnCategorized"
             };
 
             _topicRepo.Save(listing);

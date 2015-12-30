@@ -37,7 +37,7 @@ namespace MusStore
                 lblsum.Text = addResult.First.ToString() + ", " + addResult.Second.ToString();
                 lblminus.Text = minusResult.First.ToString() + ", " + minusResult.Second.ToString();
             }
-            catch (Exception ex)
+            catch (Exception)
             {
                 //Pokemon exception handling
               

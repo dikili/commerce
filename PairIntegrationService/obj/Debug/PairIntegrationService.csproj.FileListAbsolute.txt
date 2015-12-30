@@ -9,3 +9,9 @@ C:\Source\AdPost\PairIntegrationService\bin\PairIntegrationService.dll
 C:\Source\AdPost\PairIntegrationService\bin\PairIntegrationService.pdb
 C:\Source\AdPost\PairIntegrationService\obj\Debug\PairIntegrationService.dll
 C:\Source\AdPost\PairIntegrationService\obj\Debug\PairIntegrationService.pdb
+C:\Source\PostAd\PairIntegrationService\bin\PairIntegrationService.dll.config
+C:\Source\PostAd\PairIntegrationService\bin\PairIntegrationService.dll
+C:\Source\PostAd\PairIntegrationService\bin\PairIntegrationService.pdb
+C:\Source\PostAd\PairIntegrationService\obj\Debug\PairIntegrationService.csprojResolveAssemblyReference.cache
+C:\Source\PostAd\PairIntegrationService\obj\Debug\PairIntegrationService.dll
+C:\Source\PostAd\PairIntegrationService\obj\Debug\PairIntegrationService.pdb

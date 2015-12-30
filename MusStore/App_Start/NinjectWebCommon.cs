@@ -1,5 +1,7 @@
+using EF.Data;
 using MusStore.Controllers;
-using MusStore.Data;
+using MusStore.Controllers;
+using WebApiContrib.IoC.Ninject;
 
 [assembly: WebActivatorEx.PreApplicationStartMethod(typeof(MusStore.App_Start.NinjectWebCommon), "Start")]
 [assembly: WebActivatorEx.ApplicationShutdownMethodAttribute(typeof(MusStore.App_Start.NinjectWebCommon), "Stop")]
@@ -14,7 +16,7 @@ namespace MusStore.App_Start
     using Ninject;
     using Ninject.Web.Common;
     using System.Web.Http;
-    using WebApiContrib.IoC.Ninject;
+
 
     public static class NinjectWebCommon 
     {
@@ -74,8 +76,8 @@ namespace MusStore.App_Start
 #else
             kernel.Bind<IMailService>().To<MailService>().InRequestScope();
 
-#endif
-            kernel.Bind<MessageBoardContext>().To<MessageBoardContext>().InRequestScope();
+#endif 
+            kernel.Bind<MessageBoardContext>().ToSelf().InRequestScope();
             kernel.Bind<ITopicRepository>().To<TopicRepository>().InRequestScope();
             kernel.Bind<ICompanyRepository>().To<CompanyRepository>().InRequestScope();
             kernel.Bind<IUnitOfWork>().To<UnitOfWork>().InRequestScope();
