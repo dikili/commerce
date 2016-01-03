@@ -10,5 +10,7 @@ namespace MusStore
     {
         public AppRole() : base() { }
         public AppRole(string name) : base(name) { }
+
+      
     }
 }

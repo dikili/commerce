@@ -3,17 +3,16 @@ namespace EF.Data.Migrations
     using System;
     using System.Data.Entity.Migrations;
     
-    public partial class TopicContructer : DbMigration
+    public partial class changes : DbMigration
     {
         public override void Up()
         {
-
-            //AlterColumn("Topics", "IsVisible", c => c.Boolean(defaultValue: true));
-            //Sql("Update Topics Set ProductCategory='General'");
+            DropColumn("dbo.AspNetUsers", "Sex");
         }
         
         public override void Down()
         {
+            AddColumn("dbo.AspNetUsers", "Sex", c => c.String());
         }
     }
 }

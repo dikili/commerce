@@ -149,8 +149,8 @@ namespace MusStore.Controllers
             _topicRepo.Save(listing);
 
             _iUnitOfWork.Commit();
-
-            return View();
+            //redirect to the created company's page
+            return RedirectToAction("Index", routeValues: new { id = idCompany });
         }
 
         public ActionResult Contact()

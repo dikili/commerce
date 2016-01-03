@@ -1,4 +1,6 @@
-﻿@using EF.Core
+﻿@using System.Web.Mvc.Html
+@using EF.Core
+@using Microsoft.AspNet.Identity
 @model IEnumerable<EF.Core.Topic>
 
 @{
@@ -13,24 +15,25 @@
 </div>
 
 <div class="messages">
-   @if(@Model !=null && @Model.Any()){
+   @if (@Model != null && @Model.Any())
+   {
        <div class="message row">
-            <div class="title span10">
-                @Model.FirstOrDefault().Title
-            </div>
-            <div class="contents span16"> <img src=@Model.FirstOrDefault().Path>
-            </div>
-            @*<div class="date span2">Feb 12,2015</div>*@
-            <div class="contents span12">
-                @Model.FirstOrDefault().Body
-            </div>
-            <div class="toolbar span12">
-                <button class="btn-primary reply-button span2">
-                    Reply
-                </button>
-                <div class="replies span12"></div>
-            </div>
-        </div>
+           <div class="title span10">
+               @Model.FirstOrDefault().Title
+           </div>
+           <div class="contents span16"> <img src=@Model.FirstOrDefault().Path>
+           </div>
+           @*<div class="date span2">Feb 12,2015</div>*@
+           <div class="contents span12">
+               @Model.FirstOrDefault().Body
+           </div>
+           <div class="toolbar span12">
+               <button class="btn-primary reply-button span2">
+                   Reply
+               </button>
+               <div class="replies span12"></div>
+           </div>
+       </div>
    }
 </div>      
 

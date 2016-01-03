@@ -1,6 +1,4 @@
 using EF.Data;
-using MusStore.Controllers;
-using MusStore.Controllers;
 using WebApiContrib.IoC.Ninject;
 
 [assembly: WebActivatorEx.PreApplicationStartMethod(typeof(MusStore.App_Start.NinjectWebCommon), "Start")]

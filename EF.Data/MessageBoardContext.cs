@@ -10,7 +10,7 @@ using Microsoft.AspNet.Identity.EntityFramework;
 
 namespace EF.Data
 {
-    public class MessageBoardContext : IdentityDbContext<AppUser>
+    public class MessageBoardContext : IdentityDbContext<ApplicationUser>
     {
         public MessageBoardContext()
             : base("abc")

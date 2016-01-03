@@ -7,9 +7,9 @@ namespace EF.Data.Migrations
     {
         public override void Up()
         {
-            AlterColumn("Topics", "IsVisible", c => c.Boolean(defaultValue: true));
-            Sql("Update Topics Set IsVisible=true");
-            Sql("Update Topics Set ProductCategory='General'");
+            //AlterColumn("Topics", "IsVisible", c => c.Boolean(defaultValue: true));
+            //Sql("Update Topics Set IsVisible=true");
+            //Sql("Update Topics Set ProductCategory='General'");
         }
         
         public override void Down()

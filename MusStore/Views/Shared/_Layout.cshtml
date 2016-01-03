@@ -1,4 +1,5 @@
-﻿<!DOCTYPE html>
+﻿@using Microsoft.AspNet.Identity
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
@@ -76,64 +77,127 @@
 <div class="fixedbar">
   <div class="container">
      
-          <div class="row">
+      <div class="row">
 
 
-              <div class="span9">
-                  <div class="logo">
+          <div class="span9">
+              <div class="logo">
+                  <div class="pull-left">
+                      <!-- Logo with font awesome icon (icon-camera-retro). Replace it with your logo. Replace # with your site link -->
+                      <h1>
+                          <a href="#"><i class="icon-camera-retro"></i> Outlooker</a>
+                      </h1>
+                  </div>
+
+                  <div class="navi">
+                      <!-- Navigation Starts Here -->
                       <div class="pull-left">
-                          <!-- Logo with font awesome icon (icon-camera-retro). Replace it with your logo. Replace # with your site link -->
-                          <h1><a href="#"><i class="icon-camera-retro"></i> Outlooker</a></h1>
-                      </div>
+                          <div id="ddtopmenubar" class="mattblackmenu">
+                              <!-- Main navigation -->
+                              <ul>
+                                  <!-- Add rel="ddsubmenu{count}" to main menu -->
+                                  <li>
+                                      @if (Request.IsAuthenticated)
+                                      {
+                                          <li>
+                                              @Html.ActionLink("Hello " + User.Identity.GetUserName() + "!", "Index", "Home", routeValues: null, htmlAttributes: new {title = "Main"})
 
-                      <div class="navi">
-                          <!-- Navigation Starts Here -->
-                          <div class="pull-left">
-                              <div id="ddtopmenubar" class="mattblackmenu">
+                                          </li>
+                                      }
+                                      <!-- Sub navigation, A -->
+                                      <!-- Add id "ddsubmenu{count} and class "ddsubmenustyle" -->
+                                      <ul id="ddsubmenu1" class="ddsubmenustyle">
+                                          <li><a href="index-slider.html">With Slider</a></li>
+                                          <li><a href="full-width.html">Full Width</a></li>
+                                      </ul>
+                                  </li>
                                   <!-- Main navigation -->
-                                  <ul>
-                                      <!-- Add rel="ddsubmenu{count}" to main menu -->
+                                
+
+                                  @*<li>@Html.ActionLink("My Messages", "Index", "Home");</li>*@
+                                  <!-- Sub navigation -->
+                                  <ul id="ddsubmenu3" class="ddsubmenustyle">
                                       <li>
-                                          <a href="index.html" rel="ddsubmenu1">Home</a>
-                                          <!-- Sub navigation, A -->
-                                          <!-- Add id "ddsubmenu{count} and class "ddsubmenustyle" -->
-                                          <ul id="ddsubmenu1" class="ddsubmenustyle">
-                                              <li><a href="index-slider.html">With Slider</a></li>
-                                              <li><a href="full-width.html">Full Width</a></li>
+                                          <a href="#">Nav Level #2</a>
+                                          <ul>
+                                              <li><a href="#">Nav Level #3</a></li>
                                           </ul>
                                       </li>
-                                      <!-- Main navigation -->
-
-
-                                      <li>@Html.ActionLink("My Messages", "MyMessages", "Home");</li>
-                                      <!-- Sub navigation -->
-                                      <ul id="ddsubmenu3" class="ddsubmenustyle">
-                                          <li>
-                                              <a href="#">Nav Level #2</a>
-                                              <ul>
-                                                  <li><a href="#">Nav Level #3</a></li>
-                                              </ul>
-                                          </li>
-                                      </ul>
-                                      </li>
                                   </ul>
-                              </div>
+
+                              </ul>
                           </div>
-
-
-
-
                       </div>
-                      <!-- Navigation Ends Here -->
+
+
+
+
                   </div>
+                  <!-- Navigation Ends Here -->
+              </div>
+          </div>
+          @if (Request.IsAuthenticated)
+          {
+              <table>
+                  <tr>
+                      <td></td>
+                      <td></td>
+
+                  </tr>
+
+              </table>
+              <div>
+                  <ul class="nav navbar-nav navbar-right">
+
+                      <li><a href="/Home/CompanyEntry" class="open"><span class="hidden-phone">Company Entry</span> <i class="icon-share"></i></a></li>
+
+                  </ul>
+             
+                  @*@using (Html.BeginForm("LogOff", "Account", FormMethod.Post, new {id = "logoutForm"}))
+                  {
+                      @Html.AntiForgeryToken()
+                      <ul class="nav navbar-nav navbar-right">
+                          <li><a href="javascript:document.getElementById('logoutForm').submit()">Log off</a></li>
+                      </ul>
+                  }*@
+                  <form action="/Account/LogOff" method="Post" id="logoutForm">
+                      @Html.AntiForgeryToken()
+                      @*<ul class="nav navbar-nav navbar-right">
+                          <li><a href="javascript:document.getElementById('logoutForm').submit()">Log off</a></li>
+                      </ul>*@
+                      <a href="javascript:abc()">Log Off</a>
+                    @*<input  type="submit" onclick="abc" value="LogOff" name="LogOff"/>
+                      <button id="btn1" value="Log Off" onclick="abc">Log Off</button>*@
+                      @*<a type="submit" onclick="abc">Log Off</a>*@
+                  </form>
+                  @*<div><span><i><b>-----------Industries-------------</b></i></span></div>*@
+                  @*partial view needs to be aligned here*@
+                  @*@Html.Partial("~/Views/menu.cshtml")*@
+
+                  @*@{ Html.RenderAction("Menu", "Home"); }*@
               </div>
               <div class="share">
                   <div class="pull-right">
                       <!-- Share it link for slider -->
-                      <p><a href="/Home/CompanyEntry" class="open"><span class="hidden-phone">Company Entry</span> <i class="icon-share"></i></a></p>
+                      <p>
+                          @*<a href="/Home/CompanyEntry" class="open"><span class="hidden-phone">Company Entry</span> <i class="icon-share"></i></a>*@
+                      </p>
                   </div>
               </div>
-          </div>
+          }
+          else
+          {
+              <div class="share">
+                  <div class="pull-right">
+                      <ul class="nav navbar-nav navbar-right">
+                          <li>@Html.ActionLink("Register", "Register", "Account")</li>
+                          <li>@Html.ActionLink("Log in", "Login", "Account")</li>
+                      </ul>
+                  </div>
+              </div>
+          }
+      </div>
+
           <div class="clearfix"></div>
       </div>
   </div>
@@ -141,23 +205,36 @@
 
 <!-- Main content -->
 
-<div class="main">
-  <div class="container">
-      <div class="row">
-          <div><span><i><b>-----------Industries-------------</b></i></span></div>
-          @*partial view needs to be aligned here*@
-          @*@Html.Partial("~/Views/menu.cshtml")*@
-          @{
-              Html.RenderAction("Menu", "Home");
-              
-          }
-          <div class="span3"></div>
-          <div class="span9">
-              @RenderBody()
-          </div>
-      </div>
-  </div>
-</div> 
+    <div class="main">
+        <div class="container">
+            @*<div class="row">
+                @using (Html.BeginForm("LogOff", "Account", FormMethod.Post, new { id = "logoutForm", class = "navbar-right" }))
+                {
+
+
+                <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        @Html.ActionLink("Hello " + User.Identity.GetUserName() + "!", "Index", "Home", routeValues: null, htmlAttributes: new { title = "Main" })
+                    </li>
+                    <li><a href="javascript:document.getElementById('logoutForm').submit()">Log off</a></li>
+                </ul>
+                }
+                <div><span><i><b>-----------Industries-------------</b></i></span></div>
+                @*partial view needs to be aligned here*@
+                @*@Html.Partial("~/Views/menu.cshtml")*@
+
+                @*@{ Html.RenderAction("Menu", "Home"); }*@
+            @*</div>*@
+            <div><span><i><b>-----------Industries-------------</b></i></span></div>
+            @{ Html.RenderAction("Menu", "Home"); }
+        <div class="span9">
+                    @RenderBody()
+                </div>
+
+          
+        </div>
+    </div>
+    
 
 <!-- Foot -->
 
@@ -241,6 +318,10 @@
         $(document).ready(function () {
             $("#companyEntry").validationEngine();
         });
+        function abc() {
+            document.getElementById('logoutForm').submit();
+        }
+
 </script>
 @*<script type="text/javascript" src="~/scripts/flexslider.js"></script>
 <script type="text/javascript" src="~/scripts/jquery.prettyPhoto.js"></script>*@
