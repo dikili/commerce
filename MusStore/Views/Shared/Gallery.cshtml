@@ -1,0 +1,18 @@
+﻿@model  MusStore.Models.
+<div id="blueimp-gallery-dialog" data-show="fade" data-hide="fade">
+    <!-- The gallery widget -->
+
+    <div id="links">
+        <a href=@Model.FirstOrDefault().Path title="Test" data-dialog>
+            <img src="">
+        </a>
+    </div>
+    <div id="blueimp-gallery-carousel" class="blueimp-gallery blueimp-gallery-carousel">
+        <div class="slides"></div>
+        <h3 class="title"></h3>
+        <a class="prev">‹</a>
+        <a class="next">›</a>
+        <a class="play-pause"></a>
+        <ol class="indicator"></ol>
+    </div>
+</div>

@@ -7,6 +7,7 @@ namespace EF.Data
     {
         ITopicRepository Topics { get; }
         ICompanyRepository Companies { get; }
+        IImageRepository Images { get; }
         void Commit();
     }
 }

@@ -79,6 +79,8 @@ namespace MusStore.App_Start
             kernel.Bind<ITopicRepository>().To<TopicRepository>().InRequestScope();
             kernel.Bind<ICompanyRepository>().To<CompanyRepository>().InRequestScope();
             kernel.Bind<IUnitOfWork>().To<UnitOfWork>().InRequestScope();
+            kernel.Bind<IImageRepository>().To<ImageRepository>().InRequestScope();
+
         }        
     }
 }

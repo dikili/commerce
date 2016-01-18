@@ -17,8 +17,11 @@
 		
   <!-- Google Web Font -->
   <link href='http://fonts.googleapis.com/css?family=Dosis:200,400,600' rel='stylesheet' type='text/css'>
-  
-  <!-- Stylesheets -->
+
+
+    <link rel="stylesheet" href="//ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/themes/south-street/jquery-ui.css" id="theme">
+    <link rel="stylesheet" href="//blueimp.github.io/Gallery/css/blueimp-gallery.min.css">
+    <!-- Stylesheets -->
 
     <link href="~/Content/styles.css" rel="stylesheet" />
     <link href="~/Content/Template/style/bootstrap.css" rel="stylesheet">
@@ -302,9 +305,14 @@
     </div>
   <div class="clearfix"></div>
   </div>
-</footer>		
+</footer>
 
 <!-- JS -->
+    @*below two lines of script is causing a fall back so that if it can not be retrieved from google it will load the file locally which should really replace the third line...*@
+@*<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script>
+    window.JQuery || document.write('<script src="../Scripts/jquery-1.8.2.min.js"><\/script>')
+</script>*@
     <script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
     <script src="~/Scripts/jquery.validationEngine.js"></script>
     <script src="~/Scripts/jquery.validationEngine-en.js"></script>
@@ -314,15 +322,37 @@
 <script type="text/javascript" src="~/scripts/ddlevelsmenu.js"></script>
 <script src="~/Scripts/script.js"></script>
 
-    <script>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
+    <script src="//blueimp.github.io/Gallery/js/jquery.blueimp-gallery.min.js"></script>
+    <script src="~/Scripts/jquery.image-gallery.min.js"></script>
+   
+
+<script>
         $(document).ready(function () {
-            $("#companyEntry").validationEngine();
+            //$("#companyEntry").validationEngine();
+
+
         });
         function abc() {
             document.getElementById('logoutForm').submit();
         }
+        function Highlight(inp) {
+             // $('this').toggleClass("Highlight");
+           $(inp).toggleClass("Highlight");
 
-</script>
+        }
+
+      
+    blueimp.Gallery(
+        document.getElementById('links').getElementsByTagName('a'),
+        {
+            container: '#blueimp-gallery-carousel',
+            carousel: true
+        }
+    );
+       
+    </script>
 @*<script type="text/javascript" src="~/scripts/flexslider.js"></script>
 <script type="text/javascript" src="~/scripts/jquery.prettyPhoto.js"></script>*@
  @*<script src="~/Scripts/custom.min.js"></script>*@

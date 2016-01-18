@@ -32,11 +32,9 @@ namespace EF.Data
             return _dbContext.Topics.FirstOrDefault(t => t.Id == Id);
         }
 
-        public IQueryable<Topic> FindAll()
+        public Topic GetTopicByImageId(Guid imgId)
         {
-            return _dbContext.Topics;
+            return _dbContext.Topics.Where(p => p.ImageId == imgId).FirstOrDefault();
         }
-
-      
     }
 }

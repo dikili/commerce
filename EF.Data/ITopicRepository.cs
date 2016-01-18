@@ -9,6 +9,6 @@ namespace EF.Data
 {
     public interface ITopicRepository : IRepository<Topic>
     {
-        IQueryable<Topic> FindAll();
+        Topic GetTopicByImageId(Guid imgId);
     }
 }

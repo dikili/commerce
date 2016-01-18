@@ -7,18 +7,18 @@ namespace EF.Data.Migrations
     using System.Resources;
     
     [GeneratedCode("EntityFramework.Migrations", "6.1.3-40302")]
-    public sealed partial class TopicColumnsDefaultValues : IMigrationMetadata
+    public sealed partial class _2_initial : IMigrationMetadata
     {
-        private readonly ResourceManager Resources = new ResourceManager(typeof(TopicColumnsDefaultValues));
+        private readonly ResourceManager Resources = new ResourceManager(typeof(_2_initial));
         
         string IMigrationMetadata.Id
         {
-            get { return "201512300054167_TopicColumnsDefaultValues"; }
+            get { return "201601182213211_2_initial"; }
         }
         
         string IMigrationMetadata.Source
         {
-            get { return Resources.GetString("Source"); }
+            get { return null; }
         }
         
         string IMigrationMetadata.Target

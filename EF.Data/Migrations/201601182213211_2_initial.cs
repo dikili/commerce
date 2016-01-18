@@ -3,7 +3,7 @@ namespace EF.Data.Migrations
     using System;
     using System.Data.Entity.Migrations;
     
-    public partial class file1 : DbMigration
+    public partial class _2_initial : DbMigration
     {
         public override void Up()
         {
@@ -24,7 +24,7 @@ namespace EF.Data.Migrations
                         Title = c.String(),
                         Body = c.String(),
                         Created = c.DateTime(nullable: false),
-                        Path = c.String(),
+                        ImageId = c.Guid(nullable: false),
                         CompanyId = c.Int(nullable: false),
                         isVisible = c.Boolean(nullable: false),
                         ProductCategory = c.String(),
@@ -32,6 +32,16 @@ namespace EF.Data.Migrations
                 .PrimaryKey(t => t.Id)
                 .ForeignKey("dbo.Companies", t => t.CompanyId, cascadeDelete: true)
                 .Index(t => t.CompanyId);
+            
+            CreateTable(
+                "dbo.Images",
+                c => new
+                    {
+                        ImageId = c.Guid(nullable: false),
+                        TopicId = c.Int(nullable: false),
+                        ImagePath = c.String(),
+                    })
+                .PrimaryKey(t => t.ImageId);
             
             CreateTable(
                 "dbo.AspNetRoles",
@@ -62,7 +72,6 @@ namespace EF.Data.Migrations
                 c => new
                     {
                         Id = c.String(nullable: false, maxLength: 128),
-                        Sex = c.String(),
                         Email = c.String(maxLength: 256),
                         EmailConfirmed = c.Boolean(nullable: false),
                         PasswordHash = c.String(),
@@ -124,6 +133,7 @@ namespace EF.Data.Migrations
             DropTable("dbo.AspNetUsers");
             DropTable("dbo.AspNetUserRoles");
             DropTable("dbo.AspNetRoles");
+            DropTable("dbo.Images");
             DropTable("dbo.Topics");
             DropTable("dbo.Companies");
         }

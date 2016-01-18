@@ -14,6 +14,7 @@ namespace EF.Core
         {
             isVisible = true;
             ProductCategory = "General";
+           
         }
         public int Id { get; set; }
         
@@ -22,7 +23,9 @@ namespace EF.Core
         public string Body { get; set; }
         public DateTime Created { get; set; }
         //public bool Flagged { get; set; }
-        public string Path { get; set; }
+        //since more than 1 image will be assignable ,this means that instead of path
+        //we need to store the imageId here instead changed --> public string Path { get; set; }
+        public Guid ImageId { get; set; }
     
         public int CompanyId { get; set; }
 

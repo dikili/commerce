@@ -57,24 +57,38 @@ namespace MusStore.Controllers
         [HttpGet]
         public ActionResult Index(int Id=0)
         {
-            var topic = new List<Topic>();
+            var topicViewModel = new List<TopicImageViewModel>();
+            var topViewModel = new TopicImageViewModel();
 
+            var imageRepo = _iUnitOfWork.Images;
             if (Id == 0)
             {
               foreach (var item in _topicRepo.GetAll())
               {
-                 topic.Add(item);
+                
+                 topViewModel.Body = item.Body;
+                 topViewModel.Title = item.Title;
+                 topViewModel.ImagePath= imageRepo.GetAllImagesByTopic(item.Id).ToList();
+                 topicViewModel.Add(topViewModel);
               }
 
             }
             else
             {
              //   topic.Add(_repo.GetTopic(Id));
+                var topic = _topicRepo.GetById(Id);
+                topViewModel.Body = topic.Body;
+                topViewModel.Title = topic.Title;
+                
+                //search with the topic id to get the path;
 
-                topic.Add(_topicRepo.GetById(Id));
+                topViewModel.ImagePath = imageRepo.GetAllImagesByTopic(Id).ToList();
+
+
+                topicViewModel.Add(topViewModel);
                
             }
-            return View(topic);
+            return View(topicViewModel);
         }
      
 
@@ -102,9 +116,14 @@ namespace MusStore.Controllers
             string path="";
             int idCompany=0;
             int flag = 0;
+
+            //change this function to add new images in to the new table and 
+            //related image id into the topics table below ;
+            Guid imageGuid = Guid.NewGuid();
             if (file != null && file.ContentLength > 0)
                 try
                 {
+                   
                     var comp = new Company { CompanyName = company.CompanyName };
                     _companyRepo.Save(comp);
                     
@@ -141,7 +160,9 @@ namespace MusStore.Controllers
                 CompanyId = idCompany,
                 Created = DateTime.Now,
              //   isVisible = true,
-                Path = path,
+             //this will need to be retrieved from image table from now on 
+             //F
+                ImageId = imageGuid,
                 Title = company.Title,
             //    ProductCategory = "UnCategorized"
             };
@@ -149,6 +170,21 @@ namespace MusStore.Controllers
             _topicRepo.Save(listing);
 
             _iUnitOfWork.Commit();
+
+            var image = new EF.Core.Image
+            {
+                ImageId = imageGuid,
+                ImagePath = path,
+                TopicId = _topicRepo.GetTopicByImageId(imageGuid).Id
+            };
+
+            var imageRepo = _iUnitOfWork.Images;
+
+            imageRepo.Save(image);
+
+            _iUnitOfWork.Commit();
+            //Now add the path to the 
+
             //redirect to the created company's page
             return RedirectToAction("Index", routeValues: new { id = idCompany });
         }
@@ -199,7 +235,11 @@ namespace MusStore.Controllers
                     var menuitem = new Models.Menu();
                     menuitem.TopicId = item.Id; //we are assigning topic id here since topic related to that company will be displayed
                     menuitem.CompanyName = companies.Where(p => p.Id == item.CompanyId).FirstOrDefault().CompanyName;
-                    menuitem.Path = item.Path;
+                   //menuitems path is no longer valid it is turned into a guid and 
+                    //needs to be retrieved from image table
+                    //F
+                    // menuitem.Path = item.Path;
+                    //
                     menuitem.ProductCategory = item.ProductCategory;
                     //menu.Add(menuitem);
 

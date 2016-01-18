@@ -30,11 +30,7 @@ C:\Source\PostAd\EF.Data\bin\Debug\System.Web.WebPages.xml
 C:\Source\PostAd\EF.Data\bin\Debug\System.Web.WebPages.Deployment.xml
 C:\Source\PostAd\EF.Data\bin\Debug\System.Web.WebPages.Razor.xml
 C:\Source\PostAd\EF.Data\obj\Debug\EF.Data.csprojResolveAssemblyReference.cache
-C:\Source\PostAd\EF.Data\obj\Debug\EF.Data.Migrations.file1.resources
-C:\Source\PostAd\EF.Data\obj\Debug\EF.Data.Migrations.TopicColumnsDefaultValues.resources
-C:\Source\PostAd\EF.Data\obj\Debug\EF.Data.Migrations.sqlmigration.resources
-C:\Source\PostAd\EF.Data\obj\Debug\EF.Data.Migrations.TopicContructer.resources
-C:\Source\PostAd\EF.Data\obj\Debug\EF.Data.csproj.GenerateResource.Cache
 C:\Source\PostAd\EF.Data\obj\Debug\EF.Data.dll
 C:\Source\PostAd\EF.Data\obj\Debug\EF.Data.pdb
-C:\Source\PostAd\EF.Data\obj\Debug\EF.Data.Migrations.changes.resources
+C:\Source\PostAd\EF.Data\obj\Debug\EF.Data.Migrations._2_initial.resources
+C:\Source\PostAd\EF.Data\obj\Debug\EF.Data.csproj.GenerateResource.Cache

@@ -95,29 +95,15 @@
     <Compile Include="ApplicationUser.cs" />
     <Compile Include="CompanyRepository.cs" />
     <Compile Include="ICompanyRepository.cs" />
+    <Compile Include="IImageRepository.cs" />
+    <Compile Include="ImageRepository.cs" />
     <Compile Include="IRepository.cs" />
     <Compile Include="ITopicRepository.cs" />
     <Compile Include="IUnitOfWork.cs" />
     <Compile Include="MessageBoardContext.cs" />
-    <Compile Include="Migrations\201512282230433_file1.cs" />
-    <Compile Include="Migrations\201512282230433_file1.Designer.cs">
-      <DependentUpon>201512282230433_file1.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201512300054167_TopicColumnsDefaultValues.cs" />
-    <Compile Include="Migrations\201512300054167_TopicColumnsDefaultValues.Designer.cs">
-      <DependentUpon>201512300054167_TopicColumnsDefaultValues.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201512300150185_sqlmigration.cs" />
-    <Compile Include="Migrations\201512300150185_sqlmigration.Designer.cs">
-      <DependentUpon>201512300150185_sqlmigration.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201512300203274_TopicContructer.cs" />
-    <Compile Include="Migrations\201512300203274_TopicContructer.Designer.cs">
-      <DependentUpon>201512300203274_TopicContructer.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201512301745327_changes.cs" />
-    <Compile Include="Migrations\201512301745327_changes.Designer.cs">
-      <DependentUpon>201512301745327_changes.cs</DependentUpon>
+    <Compile Include="Migrations\201601182213211_2_initial.cs" />
+    <Compile Include="Migrations\201601182213211_2_initial.Designer.cs">
+      <DependentUpon>201601182213211_2_initial.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="TopicRepository.cs" />
@@ -135,24 +121,12 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201512282230433_file1.resx">
-      <DependentUpon>201512282230433_file1.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201512300054167_TopicColumnsDefaultValues.resx">
-      <DependentUpon>201512300054167_TopicColumnsDefaultValues.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201512300150185_sqlmigration.resx">
-      <DependentUpon>201512300150185_sqlmigration.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201512300203274_TopicContructer.resx">
-      <DependentUpon>201512300203274_TopicContructer.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201512301745327_changes.resx">
-      <DependentUpon>201512301745327_changes.cs</DependentUpon>
-    </EmbeddedResource>
+    <Folder Include="App_Start\" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="App_Start\" />
+    <EmbeddedResource Include="Migrations\201601182213211_2_initial.resx">
+      <DependentUpon>201601182213211_2_initial.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

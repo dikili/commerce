@@ -28,5 +28,7 @@ namespace EF.Data
         //public DbSet<Reply> Replies { get; set; }
 
         public DbSet<Company> Companies { get; set; }
+
+        public DbSet<Image> Images { get; set; }
     }
 }

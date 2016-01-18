@@ -20,7 +20,7 @@
                 @*             @Html.EditorFor(model => model.Title)
             @Html.ValidationMessageFor(model => model.Title)*@
 
-                <input class="validate[required]" type="text" data-errormessage-value-missing="You need to enter the full name of your company" name="CompanyName"/>
+                <input class="validate[required]" onfocus="Highlight(this)" onblur="Highlight(this)" type="text" data-errormessage-value-missing="You need to enter the full name of your company" name="CompanyName" />
             </div>
 
             <div class="editor-label">
@@ -31,7 +31,7 @@
                 @*             @Html.EditorFor(model => model.Title)
             @Html.ValidationMessageFor(model => model.Title)*@
 
-                <input class="validate[required]" type="text" data-errormessage-value-missing="You need to specify a title" name="Title"/>
+                <input class="validate[required]" onfocus="Highlight(this)" onblur="Highlight(this)" type="text" data-errormessage-value-missing="You need to specify a title" name="Title" />
             </div>
 
             <div class="editor-label">
@@ -42,7 +42,7 @@
                 @*@Html.EditorFor(model => model.Body,new { @class="text-body-field" })*@
                 @Html.ValidationMessageFor(model => model.Body)
                 @*<textarea class="text-body-field" name="Body" data-errormessage-value-missing="You need to give as much detail as possible about your company's operations"></textarea>*@
-                <textarea class="validate[required]" style="width: 500px;height: 200px"  name="Body" data-errormessage-value-missing="You need to give as much detail as possible about your company's operations"></textarea>
+                <textarea class="validate[required]" style="width: 500px; height: 200px" name="Body" data-errormessage-value-missing="You need to give as much detail as possible about your company's operations" onfocus="Highlight(this)" onblur="Highlight(this)"></textarea>
             </div>
             <div class="editor-label">
                 Upload Image
