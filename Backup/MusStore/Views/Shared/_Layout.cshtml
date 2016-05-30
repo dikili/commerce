@@ -1,0 +1,361 @@
+﻿@using Microsoft.AspNet.Identity
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta charset="utf-8">
+  <!-- Change title, description and keywords -->
+  <title>@ViewBag.Title </title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="">
+  <meta name="keywords" content="">
+
+  <!-- HTML5 Support for IE -->
+  <!--[if lt IE 9]>
+  <script src="~/scripts/html5shim.js"></script>
+  <![endif]-->
+		
+  <!-- Google Web Font -->
+  <link href='http://fonts.googleapis.com/css?family=Dosis:200,400,600' rel='stylesheet' type='text/css'>
+
+
+    <link rel="stylesheet" href="//ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/themes/south-street/jquery-ui.css" id="theme">
+    <link rel="stylesheet" href="//blueimp.github.io/Gallery/css/blueimp-gallery.min.css">
+    <!-- Stylesheets -->
+
+    <link href="~/Content/styles.css" rel="stylesheet" />
+    <link href="~/Content/Template/style/bootstrap.css" rel="stylesheet">
+  <link rel="stylesheet" href="~/Content/Template/style/font-awesome.css">
+    <link href="~/Content/validationEngine.jquery.css" rel="stylesheet" />
+  <!--[if IE 7]>
+  <link rel="stylesheet" href="~/Content/Template/style/font-awesome-ie7.css">
+  <![endif]-->		
+     <link href="~/Content/Template/style/style.css" rel="stylesheet">
+  <link href="~/Content/Template/style/ddlevelsmenu-base.css" rel="stylesheet">
+  <link href="~/Content/Template/style/ddlevelsmenu-topbar.css" rel="stylesheet">
+ 
+  <!-- Change the template color below. Supported colors blue,red and green. -->
+  <link href="~/Content/Template/style/blue.css" rel="stylesheet">
+  <link href="~/Content/Template/style/bootstrap-responsive.css" rel="stylesheet">
+  <link href="~/Content/Template/style/flexslider.css" rel="stylesheet">
+  <link href="~/Content/Template/style/prettyPhoto.css" rel="stylesheet">
+   @* <link href="~/Content/Site.css" rel="stylesheet" />*@
+  
+    <!-- Favicon -->
+  <link rel="shortcut icon" href="~/Content/Template/img/favicon/favicon.png">
+</head>
+
+<body>
+
+<!-- Sliding share panel. Click "Share it" to see. -->
+
+<div class="sharepanel">
+  <div class="container">
+    <div class="row">
+      <div class="span8">
+        <div class="padd spara"> 
+          <!-- Small para -->
+          <p>Nulla facilisi. Sed justo dui, scelerisque ut consectetur vel. </p>
+        </div>
+      </div>
+      <div class="span4">
+        <div class="padd">
+          <div class="social">
+            <!-- Social media icons. Repalce # with your profile links -->
+            <a href="#"><img src="~/Content/Template/img/facebook.png" alt="" width="40"/></a>
+            <a href="#"><img src="~/Content/Template/img/twitter.png" alt="" width="40"/></a>
+            <a href="#"><img src="~/Content/Template/img/linkedin.png" alt="" width="40"/></a>
+            <a href="#"><img src="~/Content/Template/img/googleplus.png" alt="" width="40"/></a>
+            <a href="#"><img src="~/Content/Template/img/rss.png" alt="" width="40"/></a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="clearfix"></div>
+  </div>
+</div>
+
+<!-- Header -->
+
+<div class="fixedbar">
+  <div class="container">
+     
+      <div class="row">
+
+
+          <div class="span9">
+              <div class="logo">
+                  <div class="pull-left">
+                      <!-- Logo with font awesome icon (icon-camera-retro). Replace it with your logo. Replace # with your site link -->
+                      <h1>
+                          <a href="#"><i class="icon-camera-retro"></i> Outlooker</a>
+                      </h1>
+                  </div>
+
+                  <div class="navi">
+                      <!-- Navigation Starts Here -->
+                      <div class="pull-left">
+                          <div id="ddtopmenubar" class="mattblackmenu">
+                              <!-- Main navigation -->
+                              <ul>
+                                  <!-- Add rel="ddsubmenu{count}" to main menu -->
+                                  <li>
+                                      @if (Request.IsAuthenticated)
+                                      {
+                                          <li>
+                                              @Html.ActionLink("Hello " + User.Identity.GetUserName() + "!", "Index", "Home", routeValues: null, htmlAttributes: new {title = "Main"})
+
+                                          </li>
+                                      }
+                                      <!-- Sub navigation, A -->
+                                      <!-- Add id "ddsubmenu{count} and class "ddsubmenustyle" -->
+                                      <ul id="ddsubmenu1" class="ddsubmenustyle">
+                                          <li><a href="index-slider.html">With Slider</a></li>
+                                          <li><a href="full-width.html">Full Width</a></li>
+                                      </ul>
+                                  </li>
+                                  <!-- Main navigation -->
+                                
+
+                                  @*<li>@Html.ActionLink("My Messages", "Index", "Home");</li>*@
+                                  <!-- Sub navigation -->
+                                  <ul id="ddsubmenu3" class="ddsubmenustyle">
+                                      <li>
+                                          <a href="#">Nav Level #2</a>
+                                          <ul>
+                                              <li><a href="#">Nav Level #3</a></li>
+                                          </ul>
+                                      </li>
+                                  </ul>
+
+                              </ul>
+                          </div>
+                      </div>
+
+
+
+
+                  </div>
+                  <!-- Navigation Ends Here -->
+              </div>
+          </div>
+          @if (Request.IsAuthenticated)
+          {
+              <table>
+                  <tr>
+                      <td></td>
+                      <td></td>
+
+                  </tr>
+
+              </table>
+              <div>
+                  <ul class="nav navbar-nav navbar-right">
+
+                      <li><a href="/Home/CompanyEntry" class="open"><span class="hidden-phone">Company Entry</span> <i class="icon-share"></i></a></li>
+
+                  </ul>
+             
+                  @*@using (Html.BeginForm("LogOff", "Account", FormMethod.Post, new {id = "logoutForm"}))
+                  {
+                      @Html.AntiForgeryToken()
+                      <ul class="nav navbar-nav navbar-right">
+                          <li><a href="javascript:document.getElementById('logoutForm').submit()">Log off</a></li>
+                      </ul>
+                  }*@
+                  <form action="/Account/LogOff" method="Post" id="logoutForm">
+                      @Html.AntiForgeryToken()
+                      @*<ul class="nav navbar-nav navbar-right">
+                          <li><a href="javascript:document.getElementById('logoutForm').submit()">Log off</a></li>
+                      </ul>*@
+                      <a href="javascript:abc()">Log Off</a>
+                    @*<input  type="submit" onclick="abc" value="LogOff" name="LogOff"/>
+                      <button id="btn1" value="Log Off" onclick="abc">Log Off</button>*@
+                      @*<a type="submit" onclick="abc">Log Off</a>*@
+                  </form>
+                  @*<div><span><i><b>-----------Industries-------------</b></i></span></div>*@
+                  @*partial view needs to be aligned here*@
+                  @*@Html.Partial("~/Views/menu.cshtml")*@
+
+                  @*@{ Html.RenderAction("Menu", "Home"); }*@
+              </div>
+              <div class="share">
+                  <div class="pull-right">
+                      <!-- Share it link for slider -->
+                      <p>
+                          @*<a href="/Home/CompanyEntry" class="open"><span class="hidden-phone">Company Entry</span> <i class="icon-share"></i></a>*@
+                      </p>
+                  </div>
+              </div>
+          }
+          else
+          {
+              <div class="share">
+                  <div class="pull-right">
+                      <ul class="nav navbar-nav navbar-right">
+                          <li>@Html.ActionLink("Register", "Register", "Account")</li>
+                          <li>@Html.ActionLink("Log in", "Login", "Account")</li>
+                      </ul>
+                  </div>
+              </div>
+          }
+      </div>
+
+          <div class="clearfix"></div>
+      </div>
+  </div>
+
+
+<!-- Main content -->
+
+    <div class="main">
+        <div class="container">
+            @*<div class="row">
+                @using (Html.BeginForm("LogOff", "Account", FormMethod.Post, new { id = "logoutForm", class = "navbar-right" }))
+                {
+
+
+                <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        @Html.ActionLink("Hello " + User.Identity.GetUserName() + "!", "Index", "Home", routeValues: null, htmlAttributes: new { title = "Main" })
+                    </li>
+                    <li><a href="javascript:document.getElementById('logoutForm').submit()">Log off</a></li>
+                </ul>
+                }
+                <div><span><i><b>-----------Industries-------------</b></i></span></div>
+                @*partial view needs to be aligned here*@
+                @*@Html.Partial("~/Views/menu.cshtml")*@
+
+                @*@{ Html.RenderAction("Menu", "Home"); }*@
+            @*</div>*@
+            <div><span><i><b>-----------Industries-------------</b></i></span></div>
+            @{ Html.RenderAction("Menu", "Home"); }
+        <div class="span9">
+                    @RenderBody()
+                </div>
+
+          
+        </div>
+    </div>
+    
+
+<!-- Foot -->
+
+<!-- Three column footer -->
+
+<div class="foot">
+  <div class="container">
+    <div class="row">
+      <div class="span4">
+        <div class="padd">
+          <!-- Add class "widget" -->
+          <div class="widget">
+             <!-- Title -->
+             <h3>Morbi dictum nibh gravida</h3>
+             <!-- Content -->
+             <!-- Below is the blockquote -->
+             <blockquote>
+               <p>Fusce imperdiet, risus eget viverra faucibus, diam mi vestibulum libero, ut vestibulum tellus magna nec enim. Nunc dapibus varius interdum. Phasellus at lorem ut lectus fermentum convallis. Sed diam nisi, pulvinar vitae molestie hendrerit, venenatis eget mauris. Integer porta erat ac eros porta ultrices. </p>
+               <!-- Author information -->
+               <small>Ashok</small>
+             </blockquote>
+          </div>
+        </div>
+      </div>
+      <div class="span4">
+        <div class="padd">
+          <div class="widget">
+          <h3>Sed a interdum mauris</h3>
+          <ul>
+            <li><a href="#">Sed eu leo orci, condimentum gravida metus</a></li>
+            <li><a href="#">Etiam at nulla ipsum, in rhoncus purus</a></li>
+            <li><a href="#">Fusce vel magna faucibus felis dapibus facilisis</a></li>
+            <li><a href="#">Vivamus scelerisque dui in massa</a></li>
+            <li><a href="#">Pellentesque eget adipiscing dui semper</a></li>
+          </ul>
+          </div>
+        </div>
+      </div>
+      <div class="span4">
+        <div class="padd">
+          <div class="widget">
+            <h3>Service</h3>
+            <ul>
+              <li><a href="#">Sed eu leo gravida metus</a></li>
+              <li><a href="#">Etiam at rhoncus purus</a></li>
+              <li><a href="#">Fusce vel dapibus facilisis</a></li>
+              <li><a href="#">Vivamus scelerisque dui in massa</a></li>
+              <li><a href="#">Pellentesque eget  dui semper</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+	
+<!-- Footer -->
+<footer>
+  <div class="container">
+    <div class="row">
+      <div class="span12">
+        <!-- Copyright information -->
+        <div class="fpadd">Copyright &copy; 2012 - <a href="#">Your Site</a> / <a href="#">Disclaimer</a> / <a href="#">Privacy Policy</a></div>
+      </div>
+    </div>
+  <div class="clearfix"></div>
+  </div>
+</footer>
+
+<!-- JS -->
+    @*below two lines of script is causing a fall back so that if it can not be retrieved from google it will load the file locally which should really replace the third line...*@
+@*<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script>
+    window.JQuery || document.write('<script src="../Scripts/jquery-1.8.2.min.js"><\/script>')
+</script>*@
+    <script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
+    <script src="~/Scripts/jquery.validationEngine.js"></script>
+    <script src="~/Scripts/jquery.validationEngine-en.js"></script>
+@*<script src="~/Scripts/jquery-1.8.2.min.js"></script>*@
+@*<script src="~/scripts/easing.js"></script>*@
+<script src="~/scripts/bootstrap.js"></script>
+<script type="text/javascript" src="~/scripts/ddlevelsmenu.js"></script>
+<script src="~/Scripts/script.js"></script>
+
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
+    <script src="//blueimp.github.io/Gallery/js/jquery.blueimp-gallery.min.js"></script>
+    <script src="~/Scripts/jquery.image-gallery.min.js"></script>
+   
+
+<script>
+        $(document).ready(function () {
+            //$("#companyEntry").validationEngine();
+
+
+        });
+        function abc() {
+            document.getElementById('logoutForm').submit();
+        }
+        function Highlight(inp) {
+             // $('this').toggleClass("Highlight");
+           $(inp).toggleClass("Highlight");
+
+        }
+
+      
+    blueimp.Gallery(
+        document.getElementById('links').getElementsByTagName('a'),
+        {
+            container: '#blueimp-gallery-carousel',
+            carousel: true
+        }
+    );
+       
+    </script>
+@*<script type="text/javascript" src="~/scripts/flexslider.js"></script>
+<script type="text/javascript" src="~/scripts/jquery.prettyPhoto.js"></script>*@
+ @*<script src="~/Scripts/custom.min.js"></script>*@
+    @RenderSection("scripts",required:false)
+</body>
+</html>

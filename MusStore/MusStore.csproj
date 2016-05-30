@@ -20,6 +20,13 @@
     <IISExpressAnonymousAuthentication />
     <IISExpressWindowsAuthentication />
     <IISExpressUseClassicPipelineMode />
+    <MvcProjectUpgradeChecked>true</MvcProjectUpgradeChecked>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>4.0</OldToolsVersion>
+    <UseGlobalApplicationHostFile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -335,6 +342,7 @@
     <Content Include="Scripts\jquery.validationEngine.js" />
     <Content Include="Scripts\modernizr-2.6.2.js" />
     <Content Include="Scripts\script.js" />
+    <Content Include="Properties\DataSources\PairIntegrationService.Pair.datasource" />
     <None Include="Service References\PairIntegration\PairIntegrationService.disco" />
     <None Include="Service References\PairIntegration\configuration91.svcinfo" />
     <None Include="Service References\PairIntegration\configuration.svcinfo" />
@@ -342,6 +350,7 @@
       <Generator>WCF Proxy Generator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
     </None>
+    <Content Include="Views\Home\Menu.cshtml" />
     <Content Include="Web.config">
       <SubType>Designer</SubType>
     </Content>
@@ -358,8 +367,6 @@
     <Content Include="Views\Home\Contact.cshtml" />
     <Content Include="Views\Home\MyMessages.cshtml" />
     <Content Include="Views\Home\CompanyEntry.cshtml" />
-    <Content Include="Views\menu.cshtml" />
-    <Content Include="Views\Home\Menu.cshtml" />
     <None Include="Service References\PairIntegration\PairIntegrationService.wsdl" />
     <None Include="Service References\PairIntegration\PairIntegrationService.xsd">
       <SubType>Designer</SubType>

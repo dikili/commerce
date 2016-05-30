@@ -1,0 +1,60 @@
+﻿@using System.Web.ModelBinding
+@model MusStore.Models.CompanyTopic
+
+@{
+    ViewBag.Title = "CompanyEntry";
+}
+
+<h2></h2>
+
+@if (Request.IsAuthenticated)
+{
+    <form id="companyEntry"method="post" action="/Home/CompanyEntry" enctype="multipart/form-data">
+
+        <fieldset>
+            <legend class="editor-label">Please Enter Your Company's Product Details Briefly</legend>
+            <div class="editor-label">
+                Company Name
+            </div>
+            <div class="editor-field">
+                @*             @Html.EditorFor(model => model.Title)
+            @Html.ValidationMessageFor(model => model.Title)*@
+
+                <input class="validate[required]" onfocus="Highlight(this)" onblur="Highlight(this)" type="text" data-errormessage-value-missing="You need to enter the full name of your company" name="CompanyName" />
+            </div>
+
+            <div class="editor-label">
+                Title
+            </div>
+
+            <div class="editor-field">
+                @*             @Html.EditorFor(model => model.Title)
+            @Html.ValidationMessageFor(model => model.Title)*@
+
+                <input class="validate[required]" onfocus="Highlight(this)" onblur="Highlight(this)" type="text" data-errormessage-value-missing="You need to specify a title" name="Title" />
+            </div>
+
+            <div class="editor-label">
+                Brief description of the company,products...
+            </div>
+
+            <div class="editor-label">
+                @*@Html.EditorFor(model => model.Body,new { @class="text-body-field" })*@
+                @Html.ValidationMessageFor(model => model.Body)
+                @*<textarea class="text-body-field" name="Body" data-errormessage-value-missing="You need to give as much detail as possible about your company's operations"></textarea>*@
+                <textarea class="validate[required]" style="width: 500px; height: 200px" name="Body" data-errormessage-value-missing="You need to give as much detail as possible about your company's operations" onfocus="Highlight(this)" onblur="Highlight(this)"></textarea>
+            </div>
+            <div class="editor-label">
+                Upload Image
+            </div>
+            <input class="validate[required,custom[validateMIME[image/jpeg|image/png]]]]" type="file" name="file" id="file" data-errormessage-value-missing="You need to upload a picture" /><br><br>
+            <p>
+                <input type="submit" value="Submit"/>
+            </p>
+        </fieldset>
+
+    </form>
+}
+
+
+    

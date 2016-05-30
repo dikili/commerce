@@ -1,0 +1,84 @@
+﻿@using System.Web.Mvc.Html
+@using EF.Core
+@using Microsoft.AspNet.Identity
+@model IEnumerable<MusStore.Models.TopicImageViewModel>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+<div class="message-header">
+    <h1></h1>
+    <p class="lead"></p>
+</div>
+
+<div class="messages">
+ @if (@Model != null && @Model.Any())
+{
+    foreach (var mo in @Model)
+    {
+
+        <div id="blueimp-gallery-dialog" data-show="fade" data-hide="fade">
+            <!-- The gallery widget -->
+            @*Here below is required to be repeated as the number of the pictures belonging to this model*@
+            @*<div id="links">
+                <a href=@Model.FirstOrDefault().Path title=@Model.FirstOrDefault().Title data-dialog>
+                    <img src="">
+                </a>
+            </div>*@
+            @foreach (var image in mo.ImagePath)
+            {
+              <div id="links">
+                  <a href=@image title=@mo.Title data-dialog>
+                      <img src="">
+                  </a>
+            </div>
+            }
+          
+            <div id="blueimp-gallery-carousel" class="blueimp-gallery blueimp-gallery-carousel">
+                <div class="slides"></div>
+                <h3 class="title"></h3>
+                <a class="prev">‹</a>
+                <a class="next">›</a>
+                <a class="play-pause"></a>
+                <ol class="indicator"></ol>
+            </div>
+        </div>
+
+
+
+        <div class="message row">
+            <div class="title span10">
+                @mo.Title
+            </div>
+            @*<div class="contents span16"> <img src=@Model.FirstOrDefault().Path>*@
+            @*</div>*@
+
+            @*<div class="date span2">Feb 12,2015</div>*@
+            <div class="contents span12">
+                @mo.Body
+            </div>
+            <div class="toolbar span12">
+                <button class="btn-primary reply-button span2">
+                    Reply
+                </button>
+                <div class="replies span12"></div>
+            </div>
+
+
+
+        </div>
+
+
+
+    }
+
+}
+</div>      
+
+
+
+
+ 
